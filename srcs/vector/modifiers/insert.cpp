@@ -25,9 +25,9 @@ static void	_test	(Class & v,
 	try
 	{
 		_print_nl	(std::string("insert(v.begin() + ") +
-					  ft::to_string(pos) +
+					  test::to_string(pos) +
 					  ", " +
-					  ft::to_string(value) +
+					  test::to_string(value) +
 					  ")");
 		v.insert(v.begin() + pos, value);
 		_print_val_and_size<T>(v);
@@ -51,11 +51,11 @@ static void	_test	(Class & v,
 	try
 	{
 		_print_nl	(std::string("insert(v.begin() + ") +
-					  ft::to_string(pos) +
+					  test::to_string(pos) +
 					  ", " +
-					  ft::to_string(count) +
+					  test::to_string(count) +
 					  ", " +
-					  ft::to_string(value) +
+					  test::to_string(value) +
 					  ")");
 		v.insert(v.begin() + pos, count, value);
 		_print_val_and_size<T>(v);
@@ -80,11 +80,11 @@ static void	_test	(Class & v,
 	try
 	{
 		_print_nl	(std::string("insert(v.begin() + ") +
-					  ft::to_string(pos) +
+					  test::to_string(pos) +
 					  ", v2.begin() + " +
-					  ft::to_string(first) +
+					  test::to_string(first) +
 					  ", v2.end() - " +
-					  ft::to_string(last) +
+					  test::to_string(last) +
 					  ")");
 		v.insert(v.begin() + pos, v2.begin() + first, v2.end() - last);
 		_print_val_and_size<T>(v);

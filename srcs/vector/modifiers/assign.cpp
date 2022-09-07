@@ -25,9 +25,9 @@ static void	_test	(Class & v,
 	try
 	{
 		_print_nl	(std::string("assign(") +
-					 ft::to_string(n) +
+					 test::to_string(n) +
 					 ", " +
-					 ft::to_string(val) +
+					 test::to_string(val) +
 					 ")");
 		v.assign(n, val);
 		_print_val_and_size<T>(v);
@@ -52,9 +52,9 @@ static void	_test	(Class & v,
 	try
 	{
 		_print_nl	(std::string("assign(v2.begin() + ") +
-					 ft::to_string(first) +
+					 test::to_string(first) +
 					 ", v2.end() - " +
-					 ft::to_string(last) +
+					 test::to_string(last) +
 					 ")");
 		v.assign(v2.begin() + first, v2.end() - last);
 		_print_val_and_size<T>(v);

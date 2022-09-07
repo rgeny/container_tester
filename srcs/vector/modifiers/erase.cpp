@@ -25,7 +25,7 @@ static void	_test	(Class v,
 	{
 		std::cout	<< std::endl;
 		_print_nl	(std::string("erase(v.begin() + ") +
-					 ft::to_string(pos) +
+					 test::to_string(pos) +
 					 ");");
 		std::cout	<< "v.erase(v.begin() + pos) - v.begin() == "
 					<< (v.erase(v.begin() + pos) - v.begin())
@@ -52,9 +52,9 @@ static void	_test	(Class v,
 	{
 		std::cout	<< std::endl;
 		_print_nl	(std::string("erase(v.begin() + ") +
-					 ft::to_string(first) +
+					 test::to_string(first) +
 					 ", v.end() - " +
-					 ft::to_string(last) +
+					 test::to_string(last) +
 					 ");");
 		v.erase(v.begin() + first, v.end() - last);
 		_print_val_and_size<T>(v);

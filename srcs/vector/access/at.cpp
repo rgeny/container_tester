@@ -24,7 +24,7 @@ static void	_test	(Class v,
 	TRY_CATCH
 	(
 		_print_nl	(std::string("v.at(") +
-					 ft::to_string(n) +
+					 test::to_string(n) +
 					 ");");
 		T 	val = v.at(n);
 		T &	ref = v.at(n);

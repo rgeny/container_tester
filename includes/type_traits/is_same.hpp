@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   string.hpp                                         :+:      :+:    :+:   */
+/*   is_same.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/03 10:22:46 by rgeny             #+#    #+#             */
-/*   Updated: 2022/09/07 17:31:18 by rgeny            ###   ########.fr       */
+/*   Created: 2022/09/05 22:02:54 by rgeny             #+#    #+#             */
+/*   Updated: 2022/09/07 17:30:57 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_STRING_HPP
-# define TEST_STRING_HPP
+#ifdef TEST_TYPE_TRAITS_HPP
+# ifndef TEST_IS_SAME_HPP
+#  define TEST_IS_SAME_HPP
 
-# include <ostream>
-# include <sstream>
+template
+<
+	typename T,
+	typename U
+>
+struct is_same
+{	static bool const value = false;	};
 
-# include "./type_traits.hpp"
+template
+<
+	typename T
+>
+struct is_same<T, T>
+{	static bool const value = true;		};
 
-namespace test
-{
-	template
-	<
-		typename T
-	>
-	std::string	to_string	(T value,
-							 typename enable_if<test::is_integral<T>::value>::type = 0)
-	{
-		std::ostringstream	oss;
-		oss	<< value;
-		return (oss.str());
-	}
-}
-
+# endif
 #endif
 

@@ -6,12 +6,12 @@
 /*   By: rgeny <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 13:06:33 by rgeny             #+#    #+#             */
-/*   Updated: 2022/09/07 16:55:21 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/09/07 17:31:35 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_HPP
-# define UTILS_HPP
+#ifndef TEST_UTILS_HPP
+# define TEST_UTILS_HPP
 
 # ifndef NAMESPACE
 #  define NAMESPACE ft

@@ -24,7 +24,7 @@ static void	_test	(Class & v,
 	TRY_CATCH
 	(
 		std::cout	<< std::string("v.push_back( ") +
-					   ft::to_string(value) +
+					   test::to_string(value) +
 					   ");";
 		v.push_back(value);
 		_print_val_and_size<T>	(v);

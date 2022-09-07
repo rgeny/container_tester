@@ -36,3 +36,5 @@ logs
 *.err
 *.log
 *.swp
+exe
+objs

@@ -24,7 +24,7 @@ static void	_test	(Class v,
 	TRY_CATCH
 	(
 		_print_nl	("std::cout	<< v[" +
-					 ft::to_string(pos) +
+					 test::to_string(pos) +
 					 "] << std::endl;");
 		T			val 		= v[pos];
 		T &			ref 		= v[pos];

@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Others
+logs
+*.err
+*.log
+*.swp

@@ -33,7 +33,7 @@
 # include <climits>
 # include <typeinfo>
 
-# include "colors.hpp"
+# include "test_colors.hpp"
 
 
 # define PRINT_EXECUTE(fct)	std::cout	<< #fct \

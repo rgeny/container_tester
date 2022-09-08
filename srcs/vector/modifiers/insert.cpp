@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Utils.hpp"
-#include "string.hpp"
+#include "test_Utils.hpp"
+#include "test_string.hpp"
 
 template
 <

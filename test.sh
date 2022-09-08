@@ -68,6 +68,12 @@ declare -a vector_iterator=(
 	"protected_member protected.cpp srcs/vector_iterator/"
 	)
 
+declare -a reverse_iterator=(
+	"structor structor.cpp srcs/reverse_iterator/"
+	"compares_operator compares_operator.cpp srcs/reverse_iterator/"
+#	"protected protected.cpp srcs/reverse_iterator/"
+	)
+
 declare -a other_test=(
 	"test test.cpp ./"
 	)
@@ -76,6 +82,7 @@ declare -A lib_test=(
 	['stack']="${stack_test[@]}"
 	['vector']="${vector_test[@]}" 
 	['vector_iterator']="${vector_iterator[@]}"
+	['reverse_iterator']="${reverse_iterator[@]}"
 	['other']="${other_test[@]}"
 	)
 
@@ -83,6 +90,7 @@ declare -a test_name=(
 	"stack"
 	"vector"
 	"vector_iterator"
+	"reverse_iterator"
 #	"other"
 	)
 

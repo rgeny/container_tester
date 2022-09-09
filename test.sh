@@ -8,7 +8,9 @@ declare -a reverse_iterator=(
 	"structor structor.cpp srcs/reverse_iterator/"
 	"compares_operator compares_operator.cpp srcs/reverse_iterator/"
 	"move_operator move_operator.cpp srcs/reverse_iterator/"
-	"assign_operator access_operator.cpp srcs/reverse_iterator/"
+	"assign_operator assign_operator.cpp srcs/reverse_iterator/"
+	"access_operator access_operator.cpp srcs/reverse_iterator/"
+	"traits traits.cpp srcs/reverse_iterator/"
 #	"protected protected.cpp srcs/reverse_iterator/"
 	)
 
@@ -239,7 +241,7 @@ declare -A opt_lst=(
 					printf \$BLUE\"\nSTD (time : \$STD_TIME ms)\n\"
 					printf \$GREEN\"\nFT (time : \$FT_TIME ms)\n\"
 					printf \"${BLUE}STD\t\t\t\t\t\t\t\t${GREEN}FT\n\"
-					eval diff -y \$TEST_LOG_DIR\$LOG_STD \$TEST_LOG_DIR\$LOG_FT"
+					eval diff -y \$TEST_LOG_DIR\$LOG_STD \$TEST_LOG_DIR\$LOG_FT$RESET"
 	["verbose_time1"]="printf \$BLUE\"(std_time : \$STD_TIME ms)\"\$GREEN\"(ft_time : \$FT_TIME ms)\n\$RESET\""
 	["stop1"]="exit"
 	["subtest1"]="get_opt \"\$1\"; if [ "\$?" == "0" ]; then return 0; fi" )
@@ -405,6 +407,7 @@ function	check_result()
 			printf "${BLUE}STD\t\t\t\t\t\t\t\t${RED}FT\n"
 			eval diff -y $TEST_LOG_DIR$LOG_STD $TEST_LOG_DIR$LOG_FT
 		fi
+		printf $RESET
 
 		${opt_lst[$STOP]}
 	elif [ "$FT_ERROR" != "$STD_ERROR" ]

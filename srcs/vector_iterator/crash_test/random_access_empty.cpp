@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iterator_assign_const.cpp                          :+:      :+:    :+:   */
+/*   random_access_empty.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/06 18:20:09 by rgeny             #+#    #+#             */
-/*   Updated: 2022/09/06 18:23:27 by rgeny            ###   ########.fr       */
+/*   Created: 2022/09/05 17:19:47 by rgeny             #+#    #+#             */
+/*   Updated: 2022/09/05 17:20:06 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int	main	(void)
 {
-	NAMESPACE::vector<int>	v(1);
-	NAMESPACE::vector<int>::const_iterator	cit(v.begin());
+	NAMESPACE::vector<int>	v;
 
-	cit[0] = 4;
+	PRINT_EXECUTE(v[0]);
 }

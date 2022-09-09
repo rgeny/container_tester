@@ -16,19 +16,19 @@ declare -a reverse_iterator=(
 
 declare -a vector_iterator=(
 	"default default.cpp srcs/vector_iterator/"
-	"crash_default_end iterator_default_end.cpp srcs/vector/crash_test/"
-	"crash_default_empty iterator_default_empty.cpp srcs/vector/crash_test/"
-	"crash_default_after_end iterator_default_after_end.cpp srcs/vector/crash_test/"
+	"crash_default_end default_end.cpp srcs/vector_iterator/crash_test/"
+	"crash_default_empty default_empty.cpp srcs/vector_iterator/crash_test/"
+	"crash_default_after_end default_after_end.cpp srcs/vector_iterator/crash_test/"
 	"input_output input_output.cpp srcs/vector_iterator/"
 	"forward forward.cpp srcs/vector_iterator/"
 	"bidirectional bidirectional.cpp srcs/vector_iterator/"
 	"random_access random_access.cpp srcs/vector_iterator/"
-	"crash_random_access_end iterator_random_access_end.cpp srcs/vector/crash_test/"
-	"crash_random_access_empty iterator_random_access_empty.cpp srcs/vector/crash_test/"
-	"crash_random_access_after_end iterator_random_access_after_end.cpp srcs/vector/crash_test/"
+	"crash_random_access_end random_access_end.cpp srcs/vector_iterator/crash_test/"
+	"crash_random_access_empty random_access_empty.cpp srcs/vector_iterator/crash_test/"
+	"crash_random_access_after_end random_access_after_end.cpp srcs/vector_iterator/crash_test/"
 	"function function.cpp srcs/vector_iterator/"
 	"traits iterator_traits.cpp srcs/vector_iterator/"
-	"crash_assign_const iterator_assign_const.cpp srcs/vector/crash_test/"
+	"crash_assign_const assign_const.cpp srcs/vector_iterator/crash_test/"
 	"protected_member protected.cpp srcs/vector_iterator/"
 	)
 

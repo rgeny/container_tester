@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iterator_default_empty.cpp                         :+:      :+:    :+:   */
+/*   default_after_end.cpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 14:38:51 by rgeny             #+#    #+#             */
-/*   Updated: 2022/09/05 14:39:20 by rgeny            ###   ########.fr       */
+/*   Created: 2022/09/05 14:39:28 by rgeny             #+#    #+#             */
+/*   Updated: 2022/09/05 14:40:00 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main	(void)
 {
-	NAMESPACE::vector<int>	v;
+	NAMESPACE::vector<int>	v(11);
 
-	PRINT_EXECUTE(*(v.begin()));
+	PRINT_EXECUTE(*(v.end() + 1));
 }

@@ -71,6 +71,7 @@ declare -a vector_iterator=(
 declare -a reverse_iterator=(
 	"structor structor.cpp srcs/reverse_iterator/"
 	"compares_operator compares_operator.cpp srcs/reverse_iterator/"
+	"move_operator move_operator.cpp srcs/reverse_iterator/"
 #	"protected protected.cpp srcs/reverse_iterator/"
 	)
 

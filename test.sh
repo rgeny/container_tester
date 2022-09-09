@@ -4,17 +4,30 @@
 #################### TESTS ####################
 ###############################################
 
-declare -a stack_test=(
-	"member_types member_types.cpp srcs/stack/"
-	"crash_test_const_reference crash_const_reference.cpp srcs/stack/"
-	"member_objects member_objects.cpp srcs/stack/"
-	"structor structor.cpp srcs/stack/"
-	"crash_test_top crash_top.cpp srcs/stack/"
-	"pop_empty pop_empty.cpp srcs/stack/"
-	"big_size big_size.cpp srcs/stack/"
-	"member_function member_function.cpp srcs/stack/"
-	"operator= operator=.cpp srcs/stack/"
-	"relationnal_operator relationnal_operator.cpp srcs/stack/"
+declare -a reverse_iterator=(
+	"structor structor.cpp srcs/reverse_iterator/"
+	"compares_operator compares_operator.cpp srcs/reverse_iterator/"
+	"move_operator move_operator.cpp srcs/reverse_iterator/"
+	"assign_operator access_operator.cpp srcs/reverse_iterator/"
+#	"protected protected.cpp srcs/reverse_iterator/"
+	)
+
+declare -a vector_iterator=(
+	"default default.cpp srcs/vector_iterator/"
+	"crash_default_end iterator_default_end.cpp srcs/vector/crash_test/"
+	"crash_default_empty iterator_default_empty.cpp srcs/vector/crash_test/"
+	"crash_default_after_end iterator_default_after_end.cpp srcs/vector/crash_test/"
+	"input_output input_output.cpp srcs/vector_iterator/"
+	"forward forward.cpp srcs/vector_iterator/"
+	"bidirectional bidirectional.cpp srcs/vector_iterator/"
+	"random_access random_access.cpp srcs/vector_iterator/"
+	"crash_random_access_end iterator_random_access_end.cpp srcs/vector/crash_test/"
+	"crash_random_access_empty iterator_random_access_empty.cpp srcs/vector/crash_test/"
+	"crash_random_access_after_end iterator_random_access_after_end.cpp srcs/vector/crash_test/"
+	"function function.cpp srcs/vector_iterator/"
+	"traits iterator_traits.cpp srcs/vector_iterator/"
+	"crash_assign_const iterator_assign_const.cpp srcs/vector/crash_test/"
+	"protected_member protected.cpp srcs/vector_iterator/"
 	)
 
 declare -a vector_test=(
@@ -50,30 +63,17 @@ declare -a vector_test=(
 	"big_size big_size.cpp srcs/vector/"
 	)
 
-declare -a vector_iterator=(
-	"default default.cpp srcs/vector_iterator/"
-	"crash_default_end iterator_default_end.cpp srcs/vector/crash_test/"
-	"crash_default_empty iterator_default_empty.cpp srcs/vector/crash_test/"
-	"crash_default_after_end iterator_default_after_end.cpp srcs/vector/crash_test/"
-	"input_output input_output.cpp srcs/vector_iterator/"
-	"forward forward.cpp srcs/vector_iterator/"
-	"bidirectional bidirectional.cpp srcs/vector_iterator/"
-	"random_access random_access.cpp srcs/vector_iterator/"
-	"crash_random_access_end iterator_random_access_end.cpp srcs/vector/crash_test/"
-	"crash_random_access_empty iterator_random_access_empty.cpp srcs/vector/crash_test/"
-	"crash_random_access_after_end iterator_random_access_after_end.cpp srcs/vector/crash_test/"
-	"function function.cpp srcs/vector_iterator/"
-	"traits iterator_traits.cpp srcs/vector_iterator/"
-	"crash_assign_const iterator_assign_const.cpp srcs/vector/crash_test/"
-	"protected_member protected.cpp srcs/vector_iterator/"
-	)
-
-declare -a reverse_iterator=(
-	"structor structor.cpp srcs/reverse_iterator/"
-	"compares_operator compares_operator.cpp srcs/reverse_iterator/"
-	"move_operator move_operator.cpp srcs/reverse_iterator/"
-	"access_operator access_operator.cpp srcs/reverse_iterator/"
-#	"protected protected.cpp srcs/reverse_iterator/"
+declare -a stack_test=(
+	"member_types member_types.cpp srcs/stack/"
+	"crash_test_const_reference crash_const_reference.cpp srcs/stack/"
+	"member_objects member_objects.cpp srcs/stack/"
+	"structor structor.cpp srcs/stack/"
+	"crash_test_top crash_top.cpp srcs/stack/"
+	"pop_empty pop_empty.cpp srcs/stack/"
+	"big_size big_size.cpp srcs/stack/"
+	"member_function member_function.cpp srcs/stack/"
+	"operator= operator=.cpp srcs/stack/"
+	"relationnal_operator relationnal_operator.cpp srcs/stack/"
 	)
 
 declare -a other_test=(

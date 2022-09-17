@@ -2,10 +2,67 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <sstream>
 #include "includes/test_Utils.hpp"
 
 #define NDEBUG
 #include <cassert>
+
+//#include "RBTree.hpp"
+#include "map.hpp"
+
+#define SIZE 10
+
+ft::map<int, int>	test;
+
+static void	_insert	(int val)
+{
+	ft::pair<int, int>	p(val, val);
+
+	test.insert(p);
+}
+
+int	main	(void)
+{
+	std::ostringstream	oss;
+
+	_insert(0);
+	_insert(-10);
+	_insert(-20);
+	_insert(-7);
+	_insert(-9000);
+	_insert(-19);
+//	_insert(-8);
+//	_insert(-6);
+//	_insert(-5);
+//	_insert(-4);
+//	_insert(-3);
+//	_insert(-2);
+//	_insert(-1);
+	_insert(80);
+	_insert(7);
+	_insert(6);
+//	_insert(8);
+//	_insert(90);
+	_insert(85);
+	_insert(95);
+
+	test.print();
+//	test.insert(-1);
+//	for (int i = 0, j = SIZE / 4, k = j * 3, l = SIZE; i < SIZE / 4; ++i, ++j, --k, --l)
+//	{
+//		std::cout	<< "value == "
+//					<< i
+//					<< std::endl;
+//		test.insert(k);
+//		test.insert(i);
+//		test.insert(j);
+//		test.insert(k);
+//		test.insert(l);
+//	}
+//	test.print();
+}
+
 
 //void	test	(void)
 //{
@@ -21,30 +78,36 @@
 #endif
 
 
-class Test
-	:public NAMESPACE::vector<int>::iterator
-{
-	public:
-		Test	(NAMESPACE::vector<int>::iterator const & it)
-			:NAMESPACE::vector<int>::iterator(it)
-		{	}
+//class Test
+//	:public NAMESPACE::vector<int>::iterator
+//{
+//	public:
+//		Test	(NAMESPACE::vector<int>::iterator const & it)
+//			:NAMESPACE::vector<int>::iterator(it)
+//		{	}
+//
+//
+//		void	test(void)
+//		{
+//			std::cout	<< &(*this->_M_current)
+//						<< std::endl;
+//		}
+//};
 
-
-		void	test(void)
-		{
-			std::cout	<< &(*this->_M_current)
-						<< std::endl;
-		}
-};
-
-int	main	(__attribute((unused)) int argc,
-			 __attribute((unused)) char * argv[])
-{
-	NAMESPACE::vector<int>	v(10);
-	NAMESPACE::vector<int>::iterator	it = v.begin();
-	Test	a(it);
-
-	a.test();
+//int	main	(__attribute((unused)) int argc,
+//			 __attribute((unused)) char * argv[])
+//{
+//	NAMESPACE::map<int, int>	m;
+//
+//	m[1] = 4;
+//
+//	std::cout	<< m[1]
+//				<< std::endl;
+//	NAMESPACE::vector<int>	v(10);
+//	NAMESPACE::vector<int>::iterator	it = v.begin();
+//	Test	a(it);
+//
+//	a.test();
 //	NAMESPACE::vector<int>	v(10, 10);
 //	NAMESPACE::vector<int>::const_iterator	it = v.begin();
 //
@@ -189,4 +252,4 @@ int	main	(__attribute((unused)) int argc,
 //					<< std::endl;
 //
 //	}
-}
+//}

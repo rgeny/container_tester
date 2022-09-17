@@ -95,7 +95,7 @@ declare -a test_name=(
 	"vector"
 	"vector_iterator"
 	"reverse_iterator"
-#	"other"
+	"other"
 	)
 
 ###############################################

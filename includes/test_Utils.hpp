@@ -6,7 +6,7 @@
 /*   By: rgeny <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 13:06:33 by rgeny             #+#    #+#             */
-/*   Updated: 2022/09/10 18:09:06 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/09/19 14:46:25 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void	_print_val_and_size	(T2 & v)
 	std::for_each(v.begin(), v.end(), _print_val<T1>);
 }
 
-void	_print_nl	(std::string msg);
+void	_print_nl	(std::string msg = "");
 
 template <class T>
 void	init_vector	(NAMESPACE::vector<T> & v

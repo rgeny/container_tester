@@ -64,6 +64,7 @@ declare -a vector_test=(
 	"operator operator.cpp srcs/vector/"
 	"big_size big_size.cpp srcs/vector/"
 	"get_allocator get_allocator.cpp srcs/vector/access/"
+	"typedef typedef.cpp srcs/vector/"
 	)
 
 declare -a stack_test=(

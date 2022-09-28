@@ -8,23 +8,159 @@
 #define NDEBUG
 #include <cassert>
 
-//#include "RBTree.hpp"
-#include "map.hpp"
+#include "RBTree.hpp"
+#include "iterator.hpp"
+#include "RBTree/RBNode.hpp"
+# include "vector.hpp"
+//#include "map.hpp"
 
 #define SIZE 10
+#define TYPE long
 
-ft::map<int, int>	test;
-
-static void	_insert	(int val)
+template < typename T >
+struct value_compare
+	:public std::binary_function<T, T, bool>
 {
-	ft::pair<int, int>	p(val, val);
+	value_compare	(void)
+		:comp()
+	{	}
 
-	test.insert(p);
+
+	T	operator()	(T const & lhs,
+					 T const & rhs)
+	{
+		return (comp(lhs, rhs));
+	}
+	protected:
+		std::less<T>	comp;
+};
+
+template
+<
+	typename Key,
+	typename Value
+>
+struct KeyOfValue
+{
+	KeyOfValue	(void)
+	{	}
+
+	Key	operator()	(Value const & val)
+	{	return (val);	}
+};
+
+ft::RB::Tree<TYPE, TYPE, KeyOfValue<TYPE, TYPE>, value_compare<TYPE> >	test;
+
+__attribute__((unused)) static void	_insert	(TYPE val)
+{
+	test.insert(val);
+#ifdef __DEBUG__
+		test.print();
+#endif
+	std::cout	<< "insert("
+				<< val
+				<< ")"
+				<< std::endl
+				<< "size == "
+				<< test.size()
+				<< std::endl;
+}
+
+ __attribute__((unused)) static void	_erase	(TYPE val)
+{
+	test.erase(val);
+#ifdef __DEBUG__
+	test.print();
+#endif
+	std::cout	<< "erase("
+				<< val
+				<< ")"
+				<< std::endl
+				<< "size == "
+				<< test.size()
+				<< std::endl;
 }
 
 int	main	(void)
 {
-	std::ostringstream	oss;
+	ft::vector<int>	v(10, 10);
+	ft::RB::Tree<int>	tree;
+
+	tree.insert(1);
+	tree.insert(2);
+	ft::RB::NodeBase	node(*tree.begin());
+
+	std::cout	<< std::endl;
+	ft::RB::Tree_iterator<int>	it, it2(&node), it3(it2);
+	ft::RB::Tree_iterator<int const, ft::RB::NodeBase>	cit(it3);
+	std::cout	<< std::endl;
+
+	it = cit;
+//	cit = it;
+
+	PRINT_EXECUTE(it == it);
+	PRINT_EXECUTE(it != it);
+	PRINT_EXECUTE(it == it2);
+	PRINT_EXECUTE(it != it2);
+	PRINT_EXECUTE(it == it3);
+	PRINT_EXECUTE(it != it3);
+	PRINT_EXECUTE(it == cit);
+	PRINT_EXECUTE(it != cit);
+	std::cout	<< std::endl;
+
+	PRINT_EXECUTE(it2 == it);
+	PRINT_EXECUTE(it2 != it);
+	PRINT_EXECUTE(it2 == it2);
+	PRINT_EXECUTE(it2 != it2);
+	PRINT_EXECUTE(it2 == it3);
+	PRINT_EXECUTE(it2 != it3);
+	PRINT_EXECUTE(it2 == cit);
+	PRINT_EXECUTE(it2 != cit);
+	std::cout	<< std::endl;
+
+	PRINT_EXECUTE(it3 == it);
+	PRINT_EXECUTE(it3 != it);
+	PRINT_EXECUTE(it3 == it2);
+	PRINT_EXECUTE(it3 != it2);;
+	PRINT_EXECUTE(it3 == it3);
+	PRINT_EXECUTE(it3 != it3);
+	PRINT_EXECUTE(it3 == cit);
+	PRINT_EXECUTE(it3 != cit);
+	std::cout	<< std::endl;
+
+	PRINT_EXECUTE(cit == it);
+	PRINT_EXECUTE(cit != it);
+	PRINT_EXECUTE(cit == it2);
+	PRINT_EXECUTE(cit != it2);
+	PRINT_EXECUTE(cit == it3);
+	PRINT_EXECUTE(cit != it3);
+	PRINT_EXECUTE(cit == cit);
+	PRINT_EXECUTE(cit != cit);
+	std::cout	<< std::endl;
+
+	PRINT_EXECUTE((it2.base()));
+
+	PRINT_EXECUTE(sizeof(ft::RB::NodeBase));
+	PRINT_EXECUTE(sizeof(ft::RB::Node<int>));
+
+//	std::cout	<< std::endl
+//				<< "t1 :"
+//				<< std::endl;
+//	RIT	rit = v.rbegin();
+//	std::cout	<< "t2 :"
+//				<< std::endl;
+//	RIT rit2(rit);
+//	std::cout	<< "t3 :"
+//				<< std::endl;
+//	RIT rit3;
+//
+//	std::cout	<< "t4 :"
+//				<< std::endl;
+//	CRIT	crit(rit);
+//	std::cout	<< std::endl;
+//
+
+//	std::ostringstream	oss;
 
 	_insert(0);
 	_insert(-10);
@@ -32,22 +168,54 @@ int	main	(void)
 	_insert(-7);
 	_insert(-9000);
 	_insert(-19);
-//	_insert(-8);
-//	_insert(-6);
-//	_insert(-5);
-//	_insert(-4);
-//	_insert(-3);
-//	_insert(-2);
-//	_insert(-1);
+	_insert(-9);
+	_insert(-8);
+	_insert(-6);
+	_insert(-5);
+	_insert(-4);
+	_insert(-3);
+	_insert(-2);
+	_insert(-1);
 	_insert(80);
 	_insert(7);
 	_insert(6);
-//	_insert(8);
-//	_insert(90);
+	_insert(8);
+	_insert(90);
 	_insert(85);
 	_insert(95);
+	_insert(2147483648);
 
+
+ft::RB::Tree<TYPE, TYPE, KeyOfValue<TYPE, TYPE>, value_compare<TYPE> >	t2(test);
 	test.print();
+	t2.print();
+
+	_erase(-9000);
+	_erase(-9);
+	_erase(-20);
+	_erase(-10);
+	_erase(-19);
+	_erase(7);
+	_erase(80);
+	_erase(-3);
+	_erase(-2);
+	_erase(-6);
+	_erase(0);
+	_erase(6);
+	_erase(-5);
+	_erase(-7);
+	_erase(-8);
+	_erase(-4);
+	_erase(-1);
+	_erase(2147483648);
+	_erase(90);
+	_erase(95);
+	_erase(8);
+	_erase(85);
+	_insert(4);
+//
+//	test.test();
+//
 //	test.insert(-1);
 //	for (int i = 0, j = SIZE / 4, k = j * 3, l = SIZE; i < SIZE / 4; ++i, ++j, --k, --l)
 //	{
@@ -170,7 +338,7 @@ int	main	(void)
 //		v.push_back("c");
 //		v[0] = "a";
 //
-//		ft::vector<int>	v;
+//		ft::RB::vector<int>	v;
 //
 //		std::cout	<< "max_size = "
 //					<< v.max_size()

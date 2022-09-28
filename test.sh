@@ -110,7 +110,7 @@ N_PAR=3
 LINE_DEL=14
 
 ##### SCRIPT VARS #####
-TIMEOUT="timeout 0s"
+TIMEOUT="timeout 1s"
 TIMEOUT_RET="124"
 DEL_PRINT="1>/dev/null 2>/dev/null"
 OPT_LIST=$*
@@ -216,6 +216,7 @@ then
 	echo "	--test (-t)"
 	echo "	--subtest (-st)"
 	echo "	--debug (-d)"
+	echo "	--lib (-l)"
 	echo "test options :"
 	for ((i = 0; i < ${#test_name[@]}; i++))
 	do
@@ -297,6 +298,13 @@ then
 	FT_PREFIX+=$DEBUG_PREFIX
 fi
 
+get_opt "-l" "--lib"
+if [ "$?" == "1" ]
+then
+	make -C ../
+	CONTAINER_LIB=../container.a
+fi
+
 ###############################################
 ################ FUNCTION TEST ################
 ###############################################
@@ -326,7 +334,7 @@ function	do_test()
 	STD_ERROR=$(cat $ERR_STD | grep "usage" | awk '{ printf (($5 - $7)) }')
 	STD_INVALID=$(cat $ERR_STD | grep -E "Invalid|Conditional|Use\ of\ uninitialised")
 
-	TIMEOUT="timeout $(expr $STD_TIME / 50 + 1)s"
+#	TIMEOUT="timeout $(expr $STD_TIME / 50 + 1)s"
 
 	TIME=$(date +"%s%N")
 	FT=$(2>>$ERR_FT eval $TIMEOUT valgrind ./$FT_EXE)
@@ -400,7 +408,7 @@ function	check_result()
 		if [ "$FT_RET" == "$TIMEOUT_RET" ]
 		then
 			printf "timeout\n"$RESET
-#		else
+#		elseCONTAINER_LIB="$CONTAINER_LIB"
 #			printf "$FT\n"$RESET
 		fi
 
@@ -445,9 +453,9 @@ function	test()
 {
 #	CHECK PARAMETERS
 	eval "${opt_lst[$SUBTEST]}"
-	(eval make -j $STDF PREFIX=$STD_PREFIX MAKE_DIR="$3") 1>/dev/null 2>$ERR_STD
+	(eval make -j $STDF PREFIX=$STD_PREFIX MAKE_DIR="$3" CONTAINER_LIB="$CONTAINER_LIB") 1>/dev/null 2>$ERR_STD
 	MAKE_STD_ERROR="$?"
-	(eval make -j $FTF PREFIX=$FT_PREFIX MAKE_DIR="$3") 1>/dev/null 2>$ERR_FT
+	(eval make -j $FTF PREFIX=$FT_PREFIX MAKE_DIR="$3" CONTAINER_LIB="$CONTAINER_LIB") 1>/dev/null 2>$ERR_FT
 	MAKE_FT_ERROR="$?"
 	do_test $*
 	save_log $*

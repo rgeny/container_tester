@@ -6,7 +6,7 @@
 #    By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/26 11:00:36 by rgeny             #+#    #+#              #
-#    Updated: 2022/09/09 18:18:39 by rgeny            ###   ########.fr        #
+#    Updated: 2022/09/28 16:05:26 by rgeny            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NEW_DIR						= mkdir -p
 DEL_DIR						= rm -rf
 
 CC							= c++
-COMPILE_FLAG				= $(STD_FLAG) $(DEPS_FLAG) -g $(DEBUG_FLAG) -std=c++98 -Wall -Wextra -Werror
+COMPILE_FLAG				= $(STD_FLAG) $(DEPS_FLAG) -g $(DEBUG_FLAG) -std=c++98 #-Wall -Wextra -Werror
 DEPS_FLAG					= -MMD -MP
 INCLUDES_FLAG				= $(addprefix -I,	$(INCLUDES_DIR) \
 												$(ROOT_DIR) \
@@ -23,6 +23,7 @@ INCLUDES_FLAG				= $(addprefix -I,	$(INCLUDES_DIR) \
 												$(DEFINES_DIR) \
 												$(FUNCTIONS_DIR) \
 												$(TEMPLATES_DIR))
+MAKE_OTHER_DIR				= make -C
 
 INCLUDES_DIR				= includes/
 ROOT_DIR					= ../
@@ -52,10 +53,9 @@ all							:
 							@./test.sh
 endif
 
-$(EXE)						: $(OBJS)
+$(EXE)						:$(OBJS)
 							$(NEW_DIR) $(EXE_DIR)
-							printf "exe = " $(EXE)
-							$(CC) $(COMPILE_FLAG) $^ -o $@
+							$(CC) $(COMPILE_FLAG) $^ $(CONTAINER_LIB) -o $@
 
 $(OBJS_DIR)$(PREFIX)%.o		: %.cpp
 							$(NEW_DIR) $(OBJS_DIR)

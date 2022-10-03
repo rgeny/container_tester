@@ -16,6 +16,7 @@ declare -a map=(
 	"get_allocator get_allocator.cpp srcs/map/access/"
 	"at at.cpp srcs/map/access/"
 	"crash_at_const at_const.cpp srcs/map/crash_test/"
+	"operator[] operator[].cpp srcs/map/access/"
 	)
 
 declare -a reverse_iterator=(

@@ -48,8 +48,7 @@ declare -a vector_iterator=(
 	)
 
 declare -a vector_test=(
-	"size_sample sample.cpp srcs/vector/size/"
-
+	"size size.cpp srcs/vector"
 	"constructor_int int.cpp srcs/vector/constructor/"
 	"constructor_string string.cpp srcs/vector/constructor/"
 	"clear clear.cpp srcs/vector/modifiers/"

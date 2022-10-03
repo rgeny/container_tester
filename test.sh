@@ -13,6 +13,7 @@ declare -a map=(
 	"crash_cpy_constructor cpy_constructor_other_compare_function.cpp srcs/map/crash_test/"
 	"crash_range_constructor range_constructor_other_compare_function.cpp srcs/map/crash_test/"
 	"operator= operator=.cpp srcs/map/"
+	"get_allocator get_allocator.cpp srcs/map/access/"
 	)
 
 declare -a reverse_iterator=(

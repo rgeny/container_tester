@@ -6,7 +6,7 @@
 /*   By: rgeny <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 13:06:33 by rgeny             #+#    #+#             */
-/*   Updated: 2022/09/19 14:46:25 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/03 12:09:28 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@
 # include <iterator>
 # include <climits>
 # include <typeinfo>
+# include <functional>
 
 # include "test_colors.hpp"
 

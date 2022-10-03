@@ -18,6 +18,7 @@ declare -a map=(
 	"crash_at_const at_const.cpp srcs/map/crash_test/"
 	"operator[] operator[].cpp srcs/map/access/"
 	"capacity capacity.cpp srcs/map/"
+	"clear clear.cpp srcs/map/modifiers/"
 	)
 
 declare -a reverse_iterator=(

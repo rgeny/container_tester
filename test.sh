@@ -9,6 +9,9 @@ declare -a map=(
 	"crash_pair_first pair_first.cpp srcs/map/crash_test/"
 	"crash_const_ref const_ref.cpp srcs/map/crash_test/"
 	"crash_const_pt const_pt.cpp srcs/map/crash_test/"
+	"constructor constructor.cpp srcs/map/"
+	"crash_cpy_constructor cpy_constructor_other_compare_function.cpp srcs/map/crash_test/"
+	"crash_range_constructor range_constructor_other_compare_function.cpp srcs/map/crash_test/"
 	)
 
 declare -a reverse_iterator=(

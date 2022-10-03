@@ -17,6 +17,7 @@ declare -a map=(
 	"at at.cpp srcs/map/access/"
 	"crash_at_const at_const.cpp srcs/map/crash_test/"
 	"operator[] operator[].cpp srcs/map/access/"
+	"capacity capacity.cpp srcs/map/"
 	)
 
 declare -a reverse_iterator=(
@@ -48,7 +49,7 @@ declare -a vector_iterator=(
 	)
 
 declare -a vector_test=(
-	"size size.cpp srcs/vector"
+	"capacity capacity.cpp srcs/vector"
 	"constructor_int int.cpp srcs/vector/constructor/"
 	"constructor_string string.cpp srcs/vector/constructor/"
 	"clear clear.cpp srcs/vector/modifiers/"

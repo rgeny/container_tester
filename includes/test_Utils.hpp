@@ -6,7 +6,7 @@
 /*   By: rgeny <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 13:06:33 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/04 17:35:29 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/04 17:37:36 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <climits>
 # include <typeinfo>
 
-# include "test_inputIterator.hpp"
+# include "test_InputIterator.hpp"
 
 # ifndef NAMESPACE
 #  define NAMESPACE ft

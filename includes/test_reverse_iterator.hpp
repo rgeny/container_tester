@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   at_const.cpp                                       :+:      :+:    :+:   */
+/*   test_reverse_iterator.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 14:03:43 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/03 14:07:45 by rgeny            ###   ########.fr       */
+/*   Created: 2022/10/04 15:21:52 by rgeny             #+#    #+#             */
+/*   Updated: 2022/10/04 15:28:12 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_map.hpp"
+#ifndef TEST_REVERSE_ITERATOR_HPP
+# define TEST_REVERSE_ITERATOR_HPP
 
-#define SIZE 1
+# include "test_Utils.hpp"
 
-struct Test
-	:public NAMESPACE::map<int, int>
-{
-	void	test	(int i) const
-	{
-		NAMESPACE::map<int, int>::mapped_type &	mapped = this->at(i);
+# ifdef FT
+#  include "vector.hpp"
+# else
+#  include <vector>
+# endif
 
-		PRINT_EXECUTE(mapped);
-	}
-};
+#endif
 
-int	main	(void)
-{
-	__attribute__((unused)) Test	a;
-}

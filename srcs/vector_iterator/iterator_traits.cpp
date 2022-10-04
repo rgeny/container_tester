@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_Utils.hpp"
+#include "test_vector.hpp"
 
 typedef NAMESPACE::vector<int>									VECTOR;
 typedef NAMESPACE::iterator_traits<VECTOR::iterator>			ITT;

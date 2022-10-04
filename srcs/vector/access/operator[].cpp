@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_Utils.hpp"
+#include "test_vector.hpp"
 #include "test_string.hpp"
 
 template

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_Utils.hpp"
+#include "test_map.hpp"
 
 #define SIZE 4
 typedef NAMESPACE::map<int, float>	MAP;

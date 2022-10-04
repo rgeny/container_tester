@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:31:26 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/04 16:45:30 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/04 17:18:26 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,22 @@ std::ostream &	operator<<	(std::ostream & os,
 		<< pair.second
 		<< ")";
 	return (os);
+}
+
+template
+<
+	typename Key,
+	typename Value
+>
+void	print_map	(NAMESPACE::map<Key, Value> const & map)
+{
+	for (typename NAMESPACE::map<Key, Value>::const_iterator it = map.begin(), ite = map.end();
+		 it != ite;
+		 ++it)
+	{
+		std::cout	<< *it
+					<< std::endl;
+	}
 }
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:24:33 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/04 16:50:44 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/04 17:13:21 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,6 +132,15 @@ int	main	(void)
 		iite++;
 	m2.insert(iit, iite);
 
+	for (iit = m2.begin(), iite = m2.end();
+		 iit != iite;
+		 ++iit)
+	{
+		std::cout	<< *iit
+					<< std::endl;
+	}
+
+	m2.insert(_InputIterator(m2.begin()), _InputIterator(m2.end()));
 	for (iit = m2.begin(), iite = m2.end();
 		 iit != iite;
 		 ++iit)

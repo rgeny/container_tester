@@ -23,6 +23,9 @@ declare -a map=(
 	"erase erase.cpp srcs/map/modifiers/"
 	"crash_erase erase.cpp srcs/map/crash_test/"
 	"crash_erase_return erase_return_value.cpp srcs/map/crash_test/"
+	"value_compare value_compare.cpp srcs/map/"
+	"crash_value_compare_constructor value_compare_constructor.cpp srcs/map/crash_test/"
+	"crash_value_compare_member value_compare_member.cpp srcs/map/crash_test/"
 	)
 
 declare -a reverse_iterator=(

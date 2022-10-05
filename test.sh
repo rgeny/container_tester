@@ -27,6 +27,7 @@ declare -a map=(
 	"crash_value_compare_constructor value_compare_constructor.cpp srcs/map/crash_test/"
 	"crash_value_compare_member value_compare_member.cpp srcs/map/crash_test/"
 	"swap swap.cpp srcs/map/modifiers/"
+	"count count.cpp srcs/map/access/"
 	)
 
 declare -a reverse_iterator=(

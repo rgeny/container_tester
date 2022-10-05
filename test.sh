@@ -30,6 +30,8 @@ declare -a map=(
 	"count count.cpp srcs/map/access/"
 	"find find.cpp srcs/map/access/"
 	"equal_range equal_range.cpp srcs/map/access/"
+	"lower_bound lower_bound.cpp srcs/map/access/"
+	"upper_bound upper_bound.cpp srcs/map/access/"
 	)
 
 declare -a reverse_iterator=(

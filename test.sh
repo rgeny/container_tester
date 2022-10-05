@@ -29,6 +29,7 @@ declare -a map=(
 	"swap swap.cpp srcs/map/modifiers/"
 	"count count.cpp srcs/map/access/"
 	"find find.cpp srcs/map/access/"
+	"equal_range equal_range.cpp srcs/map/access/"
 	)
 
 declare -a reverse_iterator=(

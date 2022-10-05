@@ -4,6 +4,10 @@
 #################### TESTS ####################
 ###############################################
 
+declare -a map_iterator=(
+	"typedef typedef.cpp srcs/map_iterator/"
+	)
+
 declare -a map=(
 	"typedef typedef.cpp srcs/map/"
 	"crash_pair_first pair_first.cpp srcs/map/crash_test/"
@@ -122,6 +126,7 @@ declare -A lib_test=(
 	['vector_iterator']="${vector_iterator[@]}"
 	['reverse_iterator']="${reverse_iterator[@]}"
 	['map']="${map[@]}"
+	['map_iterator']="${map_iterator[@]}"
 	['other']="${other_test[@]}"
 	)
 
@@ -131,6 +136,7 @@ declare -a test_name=(
 	"vector_iterator"
 	"reverse_iterator"
 	"map"
+	"map_iterator"
 	"other"
 	)
 

@@ -1,3 +1,0 @@
-iterator erase( iterator pos );
-iterator erase( iterator first, iterator last );
-size_type erase( const Key& key );

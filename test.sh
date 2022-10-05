@@ -12,7 +12,7 @@ declare -a map=(
 	"constructor constructor.cpp srcs/map/"
 	"crash_cpy_constructor cpy_constructor_other_compare_function.cpp srcs/map/crash_test/"
 	"crash_range_constructor range_constructor_other_compare_function.cpp srcs/map/crash_test/"
-	"operator= operator=.cpp srcs/map/"
+	"operator= operator=.cpp srcs/map/modifiers/"
 	"get_allocator get_allocator.cpp srcs/map/access/"
 	"at at.cpp srcs/map/access/"
 	"crash_at_const at_const.cpp srcs/map/crash_test/"
@@ -23,7 +23,7 @@ declare -a map=(
 	"erase erase.cpp srcs/map/modifiers/"
 	"crash_erase erase.cpp srcs/map/crash_test/"
 	"crash_erase_return erase_return_value.cpp srcs/map/crash_test/"
-	"value_compare value_compare.cpp srcs/map/"
+	"value_compare value_compare.cpp srcs/map/compare/"
 	"crash_value_compare_constructor value_compare_constructor.cpp srcs/map/crash_test/"
 	"crash_value_compare_member value_compare_member.cpp srcs/map/crash_test/"
 	"swap swap.cpp srcs/map/modifiers/"
@@ -32,8 +32,9 @@ declare -a map=(
 	"equal_range equal_range.cpp srcs/map/access/"
 	"lower_bound lower_bound.cpp srcs/map/access/"
 	"upper_bound upper_bound.cpp srcs/map/access/"
-	"key_comp key_comp.cpp srcs/map/"
-	"value_comp value_comp.cpp srcs/map/"
+	"key_comp key_comp.cpp srcs/map/compare/"
+	"value_comp value_comp.cpp srcs/map/compare/"
+	"compare_operator operator.cpp srcs/map/compare/"
 	)
 
 declare -a reverse_iterator=(

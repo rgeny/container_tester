@@ -6,7 +6,7 @@
 /*   By: rgeny <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 13:06:33 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/04 17:37:36 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/05 16:42:16 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,9 @@
 //# include "test_colors.hpp"
 //
 //
-# define PRINT_EXECUTE(fct)	std::cout	<< #fct \
-										<< " == " \
+# define PRINT_EXECUTE(fct)	std::cout	<< "(" \
+										<< #fct \
+										<< ") == " \
 										<< std::boolalpha \
 										<< (fct) \
 										<< std::endl

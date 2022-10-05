@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:34:45 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/04 17:35:08 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/04 18:24:08 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,10 @@ class _InputIterator
 
 	private:
 		_iterator	_it;
+
+		_InputIterator	(void)
+			:_it()
+		{	}
 };
 
 #endif

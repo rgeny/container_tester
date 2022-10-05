@@ -20,6 +20,9 @@ declare -a map=(
 	"capacity capacity.cpp srcs/map/"
 	"clear clear.cpp srcs/map/modifiers/"
 	"insert insert.cpp srcs/map/modifiers/"
+	"erase erase.cpp srcs/map/modifiers/"
+	"crash_erase erase.cpp srcs/map/crash_test/"
+	"crash_erase_return erase_return_value.cpp srcs/map/crash_test/"
 	)
 
 declare -a reverse_iterator=(

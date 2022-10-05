@@ -32,6 +32,8 @@ declare -a map=(
 	"equal_range equal_range.cpp srcs/map/access/"
 	"lower_bound lower_bound.cpp srcs/map/access/"
 	"upper_bound upper_bound.cpp srcs/map/access/"
+	"key_comp key_comp.cpp srcs/map/"
+	"value_comp value_comp.cpp srcs/map/"
 	)
 
 declare -a reverse_iterator=(

@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 14:34:31 by rgeny             #+#    #+#             */
-/*   Updated: 2022/09/09 14:50:13 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/08 15:03:10 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 #define SIZE 10
 
-template
-<
-	typename RIterator
->
-void	_test	(RIterator rit,
-				 size_t n)
+typedef NAMESPACE::vector<std::string>		VECTOR;
+typedef NAMESPACE::map<std::string, int>	MAP;
+
+template < typename RIterator >
+void	_test_vector	(RIterator rit,
+						 size_t n)
 {
 	TRY_CATCH
 	(
@@ -29,26 +29,68 @@ void	_test	(RIterator rit,
 	)
 }
 
+template < typename RIterator >
+void	_test_map	(RIterator rit,
+						 size_t n)
+{
+	TRY_CATCH
+	(
+		PRINT_EXECUTE(*rit);
+		PRINT_EXECUTE(rit->first.size());
+//		PRINT_EXECUTE(rit[n]);
+	)
+}
 
 int	main	(void)
 {
-	NAMESPACE::vector<std::string>							v;
-	NAMESPACE::vector<std::string>::reverse_iterator		rit;
-	NAMESPACE::vector<std::string>::const_reverse_iterator	crit;
-	std::string	str("abc");
-
-	for (size_t i = 0; i < SIZE; i++)
+	_print_nl("test vector reverse_iterator");
 	{
-		v.push_back(str);
-		for (size_t j = 0; j < str.size(); j++)
-			++str[j];
+		VECTOR							v;
+		VECTOR::reverse_iterator		rit;
+		VECTOR::const_reverse_iterator	crit;
+		std::string	str("abc");
+
+		for (size_t i = 0; i < SIZE; i++)
+		{
+			v.push_back(str);
+			for (size_t j = 0; j < str.size(); j++)
+				++str[j];
+		}
+
+		for (size_t i = 0; i < SIZE / 2; i++)
+		{
+			rit = v.rbegin() + i;
+			crit= v.rbegin() + i;
+			_test_vector(rit, i);
+			_test_vector(crit, i);
+		}
 	}
-
-	for (size_t i = 0; i < SIZE / 2; i++)
+	_print_nl();
+	_print_nl("test map reverse_iterator");
 	{
-		rit = v.rbegin() + i;
-		crit= v.rbegin() + i;
-		_test(rit, i);
-		_test(crit, i);
+		MAP							m;
+		MAP::reverse_iterator		rit;
+		MAP::const_reverse_iterator	crit;
+		std::string	str("abc");
+
+		for (size_t i = 0; i < SIZE; i++)
+		{
+			m[str] = i;
+			for (size_t j = 0; j < str.size(); j++)
+				++str[j];
+		}
+
+		for (size_t i = 0; i < SIZE / 2; ++i)
+		{
+			rit = m.rbegin();
+			crit= m.rbegin();
+			for (size_t j = 0; j < i; ++j)
+			{
+				++rit;
+				++crit;
+			}
+			_test_map(rit, i);
+			_test_map(crit, i);
+		}
 	}
 }

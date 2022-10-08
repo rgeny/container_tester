@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 14:34:31 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/08 15:03:10 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/08 15:38:08 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	_test_map	(RIterator rit,
 
 int	main	(void)
 {
-	_print_nl("test vector reverse_iterator");
+	_print_nl("test with vector");
 	{
 		VECTOR							v;
 		VECTOR::reverse_iterator		rit;
@@ -66,7 +66,7 @@ int	main	(void)
 		}
 	}
 	_print_nl();
-	_print_nl("test map reverse_iterator");
+	_print_nl("test with map");
 	{
 		MAP							m;
 		MAP::reverse_iterator		rit;

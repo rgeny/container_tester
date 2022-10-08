@@ -12,6 +12,7 @@ declare -a map_iterator=(
 	"crash_operator= operator=.cpp srcs/map_iterator/crash_test/"
 	"in-de-crement_operator in.de.crement_operator.cpp srcs/map_iterator/"
 	"crash_sentinel_value sentinel_value.cpp srcs/map_iterator/crash_test/"
+	"compare_operator compare_operator.cpp srcs/map_iterator/"
 	)
 
 declare -a map=(

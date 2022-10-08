@@ -13,6 +13,19 @@ declare -a map_iterator=(
 	"in-de-crement_operator in.de.crement_operator.cpp srcs/map_iterator/"
 	"crash_sentinel_value sentinel_value.cpp srcs/map_iterator/crash_test/"
 	"compare_operator compare_operator.cpp srcs/map_iterator/"
+	"access_operator access_operator.cpp srcs/map_iterator/"
+	"crash_access_operator access_operator.cpp srcs/map_iterator/crash_test/"
+	"crash_operator+val operator_it+val.cpp srcs/map_iterator/crash_test/"
+	"crash_operator+it operator_val+it.cpp srcs/map_iterator/crash_test/"
+	"crash_operator-val operator_it-val.cpp srcs/map_iterator/crash_test/"
+	"crash_operator-it operator_it-it.cpp srcs/map_iterator/crash_test/"
+	"crash_operator< operator_inf.cpp srcs/map_iterator/crash_test/"
+	"crash_operator> operator_sup.cpp srcs/map_iterator/crash_test/"
+	"crash_operator<= operator_infeq.cpp srcs/map_iterator/crash_test/"
+	"crash_operator>= operator_supeq.cpp srcs/map_iterator/crash_test/"
+	"crash_operator+= operator_it+=val.cpp srcs/map_iterator/crash_test/"
+	"crash_operator-= operator_it-=val.cpp srcs/map_iterator/crash_test/"
+	"crash_operator[] operator[].cpp srcs/map_iterator/crash_test/"
 	)
 
 declare -a map=(

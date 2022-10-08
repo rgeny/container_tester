@@ -6,7 +6,7 @@
 /*   By: rgeny <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 13:06:33 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/05 16:42:16 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/08 13:44:27 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,7 @@
 								std::cout	<< #ope \
 											<< std::endl
 
-# define PRINT_AND_EXECUTE(ope)	std::cout	<< std::endl \
-											<< #ope \
+# define PRINT_AND_EXECUTE(ope)	std::cout	<< #ope \
 											<< std::endl; \
 								ope
 

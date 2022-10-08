@@ -6,23 +6,12 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 15:42:30 by rgeny             #+#    #+#             */
-/*   Updated: 2022/09/06 19:24:39 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/08 13:58:48 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_vector.hpp"
 
-//a + n
-//n + a
-//a - n
-//a - b
-//a < b
-//a > b
-//a <= b
-//a >= b
-//a += n
-//a -= n
-//a[n]
 #define SIZE 8
 
 template

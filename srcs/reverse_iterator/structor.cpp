@@ -6,13 +6,16 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 14:27:44 by rgeny             #+#    #+#             */
-/*   Updated: 2022/09/08 15:24:20 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/08 16:01:23 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_reverse_iterator.hpp"
 
 #define SIZE 17
+
+typedef NAMESPACE::vector<int>		VECTOR;
+typedef NAMESPACE::map<int, int>	MAP;
 
 template
 <
@@ -111,22 +114,48 @@ static void	_test	(RIterator rit,
 		PRINT_EXECUTE(cpy_crit == cpy_rit);
 		PRINT_EXECUTE(cpy_crit == cpy_crit);
 	)
+	_print_nl();
 }
 
 int	main	(void)
 {
-	NAMESPACE::vector<int>							v;
-	NAMESPACE::vector<int>::reverse_iterator		rit;
-	NAMESPACE::vector<int>::const_reverse_iterator	crit;
-
-	v.reserve(SIZE);
-	for (int i = 0; i < SIZE; i++)
-		v.push_back(i);
-
-	for (size_t i = 0; i < SIZE; i++)
+	_print_nl();
+	_print_nl("test with vector");
 	{
-		rit = v.rbegin() + i;
-		crit = v.rbegin() + i;
-		_test(rit, crit);
+		VECTOR							v;
+		VECTOR::reverse_iterator		rit;
+		VECTOR::const_reverse_iterator	crit;
+
+		v.reserve(SIZE);
+		for (int i = 0; i < SIZE; i++)
+			v.push_back(i);
+
+		rit = v.rbegin();
+		crit = v.rbegin();
+		for (size_t i = 0; i < SIZE; i++)
+		{
+			_test(rit, crit);
+			rit++;
+			crit++;
+		}
+	}
+	_print_nl();
+	_print_nl("test with map");
+	{
+		MAP							m;
+		MAP::reverse_iterator		rit;
+		MAP::const_reverse_iterator	crit;
+
+		for (int i = 0; i < SIZE; i++)
+			m[i] = i;
+
+		rit = m.rbegin();
+		crit = m.rbegin();
+		for (size_t i = 0; i < SIZE; i++)
+		{
+			_test(rit, crit);
+			rit++;
+			crit++;
+		}
 	}
 }

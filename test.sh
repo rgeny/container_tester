@@ -67,6 +67,7 @@ declare -a reverse_iterator=(
 	"move_operator move_operator.cpp srcs/reverse_iterator/"
 	"assign_operator assign_operator.cpp srcs/reverse_iterator/"
 	"access_operator access_operator.cpp srcs/reverse_iterator/"
+	"crash_access_operator access_operator.cpp srcs/reverse_iterator/crash_test/"
 	"traits traits.cpp srcs/reverse_iterator/"
 	"protected protected.cpp srcs/reverse_iterator/"
 	)

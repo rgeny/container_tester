@@ -14,7 +14,7 @@
 
 #define SIZE 191
 
-void	print	(std::pair<int, int> const & p)
+void	print	(NAMESPACE::pair<int, int> const & p)
 {
 	std::cout	<< "("
 				<< p.first

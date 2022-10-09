@@ -21,7 +21,7 @@ typedef NAMESPACE::map<int, int>	MAP;
 int	main	(void)
 {
 	MAP								m;
-	std::pair<MAP::iterator, bool>	iterator_pair;
+	NAMESPACE::pair<MAP::iterator, bool>	iterator_pair;
 	MAP::iterator					it;
 
 	_print_nl("NAMESPACE::pair< iterator, bool > insert(const value_type & value");

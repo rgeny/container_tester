@@ -44,7 +44,7 @@ struct TestSentinel
 	{	return (_str < rhs._str);	}
 };
 
-void	print	(std::pair<float, int> const & p)
+void	print	(NAMESPACE::pair<float, int> const & p)
 {
 	std::cout	<< "("
 				<< p.first

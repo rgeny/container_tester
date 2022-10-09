@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   access_operator.cpp                                :+:      :+:    :+:   */
+/*   operator_supeq.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 15:04:39 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/08 15:27:41 by rgeny            ###   ########.fr       */
+/*   Created: 2022/10/08 13:53:55 by rgeny             #+#    #+#             */
+/*   Updated: 2022/10/08 16:12:43 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_reverse_iterator.hpp"
+#include "test_map.hpp"
+
+#define	SIZE 3
 
 typedef NAMESPACE::map<int, int>	MAP;
 
 int	main	(void)
 {
-	MAP		m;
+	MAP				m;
 
-	m[1] = 2147483647;
-	m[2] = -2147483648;
-
-	MAP::iterator	it = m.begin();
-
-	std::cout	<< it[1]
-				<< std::endl;
+	m[4] = 2;
+	PRINT_EXECUTE(m.rbegin() >= m.rend());
 }

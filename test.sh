@@ -67,9 +67,20 @@ declare -a reverse_iterator=(
 	"move_operator move_operator.cpp srcs/reverse_iterator/"
 	"assign_operator assign_operator.cpp srcs/reverse_iterator/"
 	"access_operator access_operator.cpp srcs/reverse_iterator/"
-	"crash_access_operator access_operator.cpp srcs/reverse_iterator/crash_test/"
 	"traits traits.cpp srcs/reverse_iterator/"
 	"protected protected.cpp srcs/reverse_iterator/"
+	"crash_operator= operator=.cpp srcs/reverse_iterator/crash_test/"
+	"crash_operator+val operator_it+val.cpp srcs/reverse_iterator/crash_test/"
+	"crash_operator+it operator_val+it.cpp srcs/reverse_iterator/crash_test/"
+	"crash_operator-val operator_it-val.cpp srcs/reverse_iterator/crash_test/"
+	"crash_operator-it operator_it-it.cpp srcs/reverse_iterator/crash_test/"
+	"crash_operator< operator_inf.cpp srcs/reverse_iterator/crash_test/"
+	"crash_operator> operator_sup.cpp srcs/reverse_iterator/crash_test/"
+	"crash_operator<= operator_infeq.cpp srcs/reverse_iterator/crash_test/"
+	"crash_operator>= operator_supeq.cpp srcs/reverse_iterator/crash_test/"
+	"crash_operator+= operator_it+=val.cpp srcs/reverse_iterator/crash_test/"
+	"crash_operator-= operator_it-=val.cpp srcs/reverse_iterator/crash_test/"
+	"crash_operator[] operator[].cpp srcs/reverse_iterator/crash_test/"
 	)
 
 declare -a vector_iterator=(

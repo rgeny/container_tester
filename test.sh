@@ -312,7 +312,7 @@ fi
 
 declare -A opt_lst=(
 	["verbose1"]="printf \$BLUE\"TEST\n\"
-					eval cat \$3\$TEST | sed 1,${LINE_DEL}d
+					eval cat -n \$3\$TEST | sed 1,${LINE_DEL}d
 					printf \$BLUE\"\nSTD (time : \$STD_TIME ms)\n\"
 					printf \$GREEN\"\nFT (time : \$FT_TIME ms)\n\"
 					printf \"${BLUE}STD\t\t\t\t\t\t\t\t${GREEN}FT\n\"
@@ -447,7 +447,7 @@ function	check_result()
 	then
 #		TEST
 		printf $BLUE"TEST\n"
-		eval "cat $3$TEST | sed 1,${LINE_DEL}d"
+		eval "cat -n $3$TEST | sed 1,${LINE_DEL}d"
 		printf $RESET
 
 #		FT
@@ -463,7 +463,7 @@ function	check_result()
 		printf "$RESET\n"
 #		TEST
 		printf $BLUE"TEST\n"
-		eval "cat $3$TEST | sed 1,${LINE_DEL}d"
+		eval "cat -n $3$TEST | sed 1,${LINE_DEL}d"
 		printf $RESET
 
 #		STD
@@ -509,7 +509,7 @@ function	check_result()
 
 #		TEST
 		printf $BLUE"TEST\n"
-		eval "cat $3$TEST | sed 1,${LINE_DEL}d"
+		eval "cat -n $3$TEST | sed 1,${LINE_DEL}d"
 		printf $RESET
 
 		printf $GREEN"\nSTD (time : $STD_TIME ms)\n"

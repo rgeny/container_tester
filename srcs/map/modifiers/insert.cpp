@@ -6,13 +6,13 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:24:33 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/04 17:35:44 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/09 15:07:41 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_map.hpp"
 
-#define SIZE_VALUE 14
+#define SIZE_VALUE 17
 #define SIZE_POS 100000
 #define SIZE_RANGE 25
 

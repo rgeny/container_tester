@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:31:26 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/14 15:44:02 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/14 16:11:25 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 # include "test_Utils.hpp"
 
 # ifdef FT
-#  include "map.hpp"
+#  include "pair.hpp"
 # else
-#  include <map>
+#  include <utility>
 # endif
 
 template
@@ -36,6 +36,12 @@ std::ostream &	operator<<	(std::ostream & os,
 		<< ")";
 	return (os);
 }
+
+# ifdef FT
+#  include "map.hpp"
+# else
+#  include <map>
+# endif
 
 template
 <

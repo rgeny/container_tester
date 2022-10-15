@@ -84,6 +84,9 @@ __attribute__((unused)) static void	_insert	(TYPE val)
 				<< "size == "
 				<< test.size()
 				<< std::endl;
+	PRINT_EXECUTE(test._head->parent);
+	PRINT_EXECUTE(test._head->left);
+	PRINT_EXECUTE(test._head->right);
 }
 
  __attribute__((unused)) static void	_erase	(TYPE val)
@@ -99,6 +102,9 @@ __attribute__((unused)) static void	_insert	(TYPE val)
 				<< "size == "
 				<< test.size()
 				<< std::endl;
+	PRINT_EXECUTE(test._head->parent);
+	PRINT_EXECUTE(test._head->left);
+	PRINT_EXECUTE(test._head->right);
 }
 
 int	main	(void)

@@ -53,6 +53,7 @@ declare -a map=(
 	"swap swap.cpp srcs/map/modifiers/"
 	"count count.cpp srcs/map/access/"
 	"find find.cpp srcs/map/access/"
+	"crash_find find.cpp srcs/map/crash_test/"
 	"equal_range equal_range.cpp srcs/map/access/"
 	"lower_bound lower_bound.cpp srcs/map/access/"
 	"upper_bound upper_bound.cpp srcs/map/access/"

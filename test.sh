@@ -59,6 +59,7 @@ declare -a map=(
 	"key_comp key_comp.cpp srcs/map/compare/"
 	"value_comp value_comp.cpp srcs/map/compare/"
 	"compare_operator operator.cpp srcs/map/compare/"
+	"crash_erase_null_iterator erase_null_iterator.cpp srcs/map/crash_test/"
 	)
 
 declare -a reverse_iterator=(

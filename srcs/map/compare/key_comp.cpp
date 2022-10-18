@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_compare.cpp                                    :+:      :+:    :+:   */
+/*   key_comp.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:22:18 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/05 16:20:11 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/18 17:05:23 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,29 @@
 
 typedef NAMESPACE::map<int, std::string>	MAP;
 
-int	main	(void)
+template < typename Container >
+void	Test<Container>::const_test	(void) const
 {
-	MAP		m;
-	MAP::key_compare	key_comp = m.key_comp();
-	for (int i = 0; i < SIZE; ++i)
-		m[i] = 'a' + i;
-	
-	for (MAP::iterator it = m.begin(), ite = m.end();
+	MAP::key_compare	key_comp = this->key_comp();
+
+	for (MAP::const_iterator it = this->begin(), ite = this->end();
 		 it != ite;
 		 ++it)
 	{
-		for (MAP::iterator it2 = m.begin(), ite2 = m.end();
+		for (MAP::const_iterator it2 = this->begin(), ite2 = this->end();
 			 it2 != ite2;
 			 ++it2)
 		{
 			PRINT_EXECUTE(key_comp(it->first, it2->first));
 		}
 	}
+}
+
+int	main	(void)
+{
+	Test<MAP>		m;
+	for (int i = 0; i < SIZE; ++i)
+		m[i] = 'a' + i;
+
+	m.const_test();
 }

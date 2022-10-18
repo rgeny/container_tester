@@ -407,6 +407,7 @@ function	do_test()
 	STD_INVALID=$(cat $ERR_STD | grep -E "Invalid|Conditional|Use\ of\ uninitialised")
 
 	TIMEOUT="timeout $(expr $STD_TIME / 50 + 1)s"
+#	TIMEOUT="timeout 1s"
 
 	TIME=$(date +"%s%N")
 	FT=$(2>>$ERR_FT eval $TIMEOUT valgrind ./$FT_EXE)

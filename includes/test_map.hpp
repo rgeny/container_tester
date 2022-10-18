@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:31:26 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/14 16:11:25 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/17 16:40:33 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,12 @@ template
 std::ostream &	operator<<	(std::ostream & os,
 							 NAMESPACE::pair<T1, T2> const & pair)
 {
-	os	<< "("
-		<< pair.first
-		<< ":"
-		<< pair.second
-		<< ")";
+//	os	<< "("
+//		<< pair.first
+//		<< ":"
+//		<< pair.second
+//		<< ")";
+	os	<< pair.first;
 	return (os);
 }
 

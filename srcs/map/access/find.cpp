@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 13:59:58 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/05 14:03:51 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/18 12:19:46 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,20 @@ int	main	(void)
 	for (int i = 0; i < SIZE; ++i)
 		m[i] = 1 + i * i;
 	
-	for (int i = -2; i < SIZE + 2; ++i)
+	for (int i = -1; i < SIZE; ++i)
 	{
 		int	const	tmp = i;
 
 		it = m.find(tmp);
 		cit = m.find(tmp);
 
+//#ifdef FT
+//		PRINT_EXECUTE(m.end()._cur_node);
+//		PRINT_EXECUTE(&m._rbtree._head);
+//		PRINT_EXECUTE(&m._rbtree._size);
+//		PRINT_EXECUTE(it._cur_node);
+//		PRINT_EXECUTE(&it->first);
+//#endif
 		PRINT_EXECUTE(it->first);
 		PRINT_EXECUTE(it->second);
 		PRINT_EXECUTE(cit->first);

@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:01:22 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/08 12:05:14 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/18 18:20:37 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,45 +15,46 @@
 #define SIZE 41
 
 
-class Test
+class String
 {
 	public:
-		Test	(void)
+		String	(void)
 			:_str()
 		{	}
-		Test	(Test const & src)
+		String	(String const & src)
 			:_str(src._str)
 		{	}
-		Test	(std::string const & str)
+		String	(std::string const & str)
 			:_str(str)
 		{	}
 
-		Test &	operator=	(Test const & src)
+		String &	operator=	(String const & src)
 		{
 			_str = src._str;
 			return (*this);
 		}
 
-		bool	operator<	(Test const & rhs) const
+		bool	operator<	(String const & rhs) const
 		{	return (_str < rhs._str);	}
 
 		std::string		_str;
 };
 
 std::ostream &	operator<<	(std::ostream & os,
-							 Test const & src)
+							 String const & src)
 {
 	os	<< src._str;
 
 	return (os);
 }
 
-typedef NAMESPACE::map<Test, int>	MAP;
+typedef NAMESPACE::map<String, int>	MAP;
 
 int	main	(void)
 {
-	MAP				m;
-	MAP::iterator	it;
+	MAP					m;
+	MAP::iterator		it;
+	MAP::const_iterator	cit;
 	std::string		str = "A";
 
 	for (int i = 0; i < SIZE; ++i)
@@ -66,37 +67,40 @@ int	main	(void)
 	}
 
 	it = m.begin();
+	cit = m.begin();
 	_print_nl();
 	_print_nl("pre-increment");
 	for (int i = 0; i < SIZE - 1; ++i)
 	{
-		std::cout	<< *++it
-					<< std::endl;
+		PRINT_EXECUTE(*++it);
+		PRINT_EXECUTE(*++cit);
 	}
 
 	it = m.end();
+	cit = m.end();
 	_print_nl();
 	_print_nl("pre-decrement");
 	for (int i = 0; i < SIZE - 1; ++i)
 	{
-		std::cout	<< *--it
-					<< std::endl;
+		PRINT_EXECUTE(*--it);
+		PRINT_EXECUTE(*--cit);
 	}
 	
 	it = m.begin();
+	cit = m.begin();
 	_print_nl();
 	_print_nl("post-increment");
 	for (int i = 0; i < SIZE - 1; ++i)
 	{
-		std::cout	<< *it++
-					<< std::endl;
+		PRINT_EXECUTE(*it++);
+		PRINT_EXECUTE(*cit++);
 	}
 
 	_print_nl();
 	_print_nl("pos-decrement");
 	for (int i = 0; i < SIZE; ++i)
 	{
-		std::cout	<< *it--
-					<< std::endl;
+		PRINT_EXECUTE(*it--);
+		PRINT_EXECUTE(*cit--);
 	}
 }

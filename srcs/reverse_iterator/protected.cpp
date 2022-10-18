@@ -6,21 +6,21 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 16:30:25 by rgeny             #+#    #+#             */
-/*   Updated: 2022/09/09 17:10:22 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/18 18:36:16 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_reverse_iterator.hpp"
 
 #define SIZE 11
-class Test
+class ReverseIteratorTest
 	:public NAMESPACE::vector<int>::reverse_iterator
 {
 	public:
 		typedef NAMESPACE::vector<int>	VECTOR;
 		typedef VECTOR::reverse_iterator	reverse_iterator;
 
-		Test	(reverse_iterator & it)
+		ReverseIteratorTest	(reverse_iterator & it)
 			:reverse_iterator(it)
 		{	}
 
@@ -36,14 +36,14 @@ class Test
 		}
 };
 
-class ConstTest
+class ConstReverseIteratorTest
 	:public NAMESPACE::vector<int>::const_reverse_iterator
 {
 	public:
 		typedef NAMESPACE::vector<int>	VECTOR;
 		typedef VECTOR::const_reverse_iterator	const_reverse_iterator;
 
-		ConstTest	(const_reverse_iterator & cit)
+		ConstReverseIteratorTest	(const_reverse_iterator & cit)
 			:const_reverse_iterator(cit)
 		{	}
 
@@ -69,8 +69,8 @@ static void	_test	(RIterator & rit,
 {
 	TRY_CATCH
 	(
-		Test		test_rit(rit);
-		ConstTest	test_crit(crit);
+		ReverseIteratorTest		test_rit(rit);
+		ConstReverseIteratorTest	test_crit(crit);
 
 		test_rit.test();
 		test_crit.test();

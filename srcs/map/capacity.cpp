@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:49:17 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/03 15:10:34 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/18 16:42:50 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,25 @@
 
 #define SIZE 17
 
+typedef NAMESPACE::map<int, int>	MAP;
+
+template < typename Container >
+void	Test<Container>::const_test	(void) const
+{
+	PRINT_EXECUTE(this->size());
+	PRINT_EXECUTE(this->max_size());
+	PRINT_EXECUTE(this->empty());
+}
+
 int	main	(void)
 {
-	NAMESPACE::map<int, int>	m;
-
-	PRINT_EXECUTE(m.size());
-	PRINT_EXECUTE(m.max_size());
-	PRINT_EXECUTE(m.empty());
-
+	Test<MAP>	m;
+	
+	m.const_test();
 	for (int i = 0; i < SIZE; ++i)
 		m[i] = i * i * i * i * i;
-	PRINT_EXECUTE(m.size());
-	PRINT_EXECUTE(m.max_size());
-	PRINT_EXECUTE(m.empty());
-
+	m.const_test();
 	m.clear();
-	PRINT_EXECUTE(m.size());
-	PRINT_EXECUTE(m.max_size());
-	PRINT_EXECUTE(m.empty());
-
+	m.const_test();
 	return (0);
 }

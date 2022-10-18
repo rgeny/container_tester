@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:46:57 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/05 17:56:40 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/18 18:21:24 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,6 @@ int	main	(void)
 	
 	it_cpy_it_empty = it_empty;
 	it_cpy_it = it;
-//	it_cpy_cit_empty = cit_empty;
-//	it_cpy_cit = cit;				//crash_test
 	cit_cpy_it_empty = it_empty;
 	cit_cpy_it = it;
 	cit_cpy_cit_empty = cit_empty;

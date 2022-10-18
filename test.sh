@@ -398,16 +398,16 @@ function	save_log()
 
 function	do_test()
 {
+	TIMEOUT="timeout 10s"
 	TIME=$(date +"%s%N")
 	STD=$EXE_DIR$3std_$1
-	STD=$(2>>$ERR_STD eval valgrind ./$STD_EXE)
+	STD=$(2>>$ERR_STD eval $TIMEOUT valgrind ./$STD_EXE)
 	STD_RET="$?"
 	STD_TIME=$(expr $(date +"%s%N") / 1000000 - $TIME / 1000000)
 	STD_ERROR=$(cat $ERR_STD | grep "usage" | awk '{ printf (($5 - $7)) }')
 	STD_INVALID=$(cat $ERR_STD | grep -E "Invalid|Conditional|Use\ of\ uninitialised")
 
 	TIMEOUT="timeout $(expr $STD_TIME / 50 + 1)s"
-#	TIMEOUT="timeout 1s"
 
 	TIME=$(date +"%s%N")
 	FT=$(2>>$ERR_FT eval $TIMEOUT valgrind ./$FT_EXE)

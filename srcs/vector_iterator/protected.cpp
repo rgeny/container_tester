@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 11:47:29 by rgeny             #+#    #+#             */
-/*   Updated: 2022/09/07 13:55:16 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/18 18:47:40 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 #define SIZE 10
 
-class Test
+class TestVectorIterator
 	:public NAMESPACE::vector<int>::iterator
 {
 	public:
 		typedef NAMESPACE::vector<int>	VECTOR;
 		typedef VECTOR::iterator		iterator;
 
-		Test	(iterator & it)
+		TestVectorIterator	(iterator & it)
 			:iterator(it)
 		{	}
 
@@ -37,14 +37,14 @@ class Test
 		}
 };
 
-class ConstTest
+class ConstTestVectorIterator
 	:public NAMESPACE::vector<int>::const_iterator
 {
 	public:
 		typedef NAMESPACE::vector<int>	VECTOR;
 		typedef VECTOR::const_iterator		const_iterator;
 
-		ConstTest	(const_iterator & it)
+		ConstTestVectorIterator	(const_iterator & it)
 			:const_iterator(it)
 		{	}
 
@@ -70,8 +70,8 @@ static void	_test	(Iterator it,
 {
 	TRY_CATCH
 	(
-		Test		test_it(it);
-		ConstTest	test_cit(cit);
+		TestVectorIterator		test_it(it);
+		ConstTestVectorIterator	test_cit(cit);
 
 		test_it.test();
 		test_cit.test();

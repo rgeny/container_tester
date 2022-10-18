@@ -63,7 +63,6 @@ declare -a map=(
 	"begin_end begin_end.cpp srcs/map/access/"
 	"crash_begin begin.cpp srcs/map/crash_test/"
 	"crash_end end.cpp srcs/map/crash_test/"
-	"empty empty.cpp srcs/map/access/"
 	)
 
 declare -a reverse_iterator=(

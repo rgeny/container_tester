@@ -6,7 +6,7 @@
 /*   By: rgeny <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 13:06:33 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/08 13:44:27 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/18 15:59:34 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,6 @@
 #  define STD
 # endif
 
-//# include <list>
-//# include <string>
-//# include <iterator>
-//# include <functional>
-//
-//# include "test_colors.hpp"
-//
-//
 # define PRINT_EXECUTE(fct)	std::cout	<< "(" \
 										<< #fct \
 										<< ") == " \
@@ -89,19 +81,12 @@ void	_print_val_and_size	(T2 & v)
 	std::for_each(v.begin(), v.end(), _print_val<T1>);
 }
 
-//template <class T>
-//void	init_vector	(NAMESPACE::vector<T> & v
-//					,size_t size
-//					,T const & val)
-//{
-//	for (size_t i = 0; i < size; i++)
-//		v[i] = ((val + i) * size) / (i + 1);
-//}
-//
-//template
-//<
-//	typename T,
-//	class Container
-//>
+template < typename Container >
+struct Test
+	:public Container
+{
+	void	test		(void);
+	void	const_test	(void) const;
+};
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 13:10:06 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/05 13:28:11 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/18 16:07:37 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,21 @@ struct value_compare
 	}
 };
 
-int	main	(void)
+template < typename Container >
+void	Test<Container>::const_test	(void) const
 {
-	MAP			m;
-
-	m["abc"] = 37;
-
 	value_compare	cmp((MAP::key_compare()));
 
-	PRINT_EXECUTE(cmp(*m.begin(), *m.begin()));
-//	MAP::value_compare	cmp((MAP::key_compare())); //crash_test
+	PRINT_EXECUTE(cmp(*this->begin(), *this->begin()));
+	PRINT_EXECUTE(cmp(*(++this->begin()), *this->begin()));
+	PRINT_EXECUTE(cmp(*this->begin(), *(++this->begin())));
+}
+
+int	main	(void)
+{
+	Test<MAP>	m;
+
+	m["abc"] = 37;
+	m["def"] = 3;
+	m.const_test();
 }

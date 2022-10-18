@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:09:36 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/05 10:44:00 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/18 16:45:17 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ int	main	(void)
 	print_map(m);
 	m.erase(m.find(SIZE / 2));
 	print_map(m);
-//	m.erase(m.end()); //crash test
-	
+
 	for (int i = 0, size = m.size(); i < size ; ++i)
 		m.erase(m.begin());
 	print_map(m);

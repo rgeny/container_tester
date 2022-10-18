@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 14:34:31 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/08 15:38:08 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/18 18:22:46 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void	_test_map	(RIterator rit,
 	(
 		PRINT_EXECUTE(*rit);
 		PRINT_EXECUTE(rit->first.size());
-//		PRINT_EXECUTE(rit[n]);
 	)
 }
 

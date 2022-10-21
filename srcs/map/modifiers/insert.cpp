@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:24:33 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/17 21:11:40 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/21 14:54:36 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int	main	(void)
 		PRINT_EXECUTE(iterator_pair.first->second);
 		PRINT_EXECUTE(iterator_pair.second);
 		_print_nl();
+		print_map(m);
 	}
 
 	m.clear();

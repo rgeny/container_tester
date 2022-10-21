@@ -11,22 +11,10 @@
 #include "RBTree.hpp"
 #include "iterator.hpp"
 #include "RBTree/RBNode.hpp"
-# include "vector.hpp"
-//#include "map.hpp"
+#include "vector.hpp"
 
 #define SIZE 10
 #define TYPE long
-
-//std::ostream &	operator<<	(std::ostream & os,
-//							 NAMESPACE::pair<TYPE, TYPE> const & p)
-//{
-//	os	<< "("
-//		<< p.first
-//		<< ":"
-//		<< p.second
-//		<< ")";
-//	return (os);
-//}
 
 template < typename T >
 struct value_compare
@@ -60,10 +48,11 @@ struct KeyOfValue
 	{	return (val.first);	}
 };
 
-typedef ft::RB::Tree<TYPE, NAMESPACE::pair<TYPE, TYPE>, KeyOfValue<TYPE, NAMESPACE::pair<TYPE, TYPE> >, value_compare<TYPE> >		MAP;
+//typedef ft::RB::Tree<TYPE, NAMESPACE::pair<TYPE, TYPE>, KeyOfValue<TYPE, NAMESPACE::pair<TYPE, TYPE> >, value_compare<TYPE> >		MAP;
+typedef NAMESPACE::map<TYPE, TYPE>	MAP;
 
-//ft::RB::Tree<TYPE, NAMESPACE::pair<TYPE, TYPE>, KeyOfValue<TYPE, NAMESPACE::pair<TYPE, TYPE> >, value_compare<TYPE> >	test;
-MAP	test;
+//MAP	test;
+Test<MAP>	test;
 
 __attribute__((unused)) static void	_insert	(TYPE val)
 {
@@ -74,9 +63,9 @@ __attribute__((unused)) static void	_insert	(TYPE val)
 //	test.print();
 //#endif
 	test.insert(p2);
-#ifdef __DEBUG__
-	test.print();
-#endif
+//#ifdef __DEBUG__
+//	test.print();
+//#endif
 	std::cout	<< "insert("
 				<< p
 				<< ")"
@@ -84,17 +73,14 @@ __attribute__((unused)) static void	_insert	(TYPE val)
 				<< "size == "
 				<< test.size()
 				<< std::endl;
-	PRINT_EXECUTE(test._head->parent);
-	PRINT_EXECUTE(test._head->left);
-	PRINT_EXECUTE(test._head->right);
 }
 
  __attribute__((unused)) static void	_erase	(TYPE val)
 {
 	test.erase(val);
-#ifdef __DEBUG__
-	test.print();
-#endif
+//#ifdef __DEBUG__
+//	test.print();
+//#endif
 	std::cout	<< "erase("
 				<< val
 				<< ")"
@@ -102,9 +88,18 @@ __attribute__((unused)) static void	_insert	(TYPE val)
 				<< "size == "
 				<< test.size()
 				<< std::endl;
-	PRINT_EXECUTE(test._head->parent);
-	PRINT_EXECUTE(test._head->left);
-	PRINT_EXECUTE(test._head->right);
+}
+
+template < typename Container >
+void	Test<Container>::test	(void)
+{
+	std::cout	<< "t1\n";
+}
+
+template < typename Container >
+void	Test<Container>::const_test	(void) const
+{
+	std::cout	<< "t2\n";
 }
 
 int	main	(void)
@@ -114,9 +109,6 @@ int	main	(void)
 	_insert(-20);
 	_insert(-7);
 	_insert(-9000);
-
-	_print_nl();
-
 	_insert(-19);
 	_insert(-9);
 	_insert(-8);
@@ -158,5 +150,5 @@ int	main	(void)
 	_erase(95);
 	_erase(8);
 	_erase(85);
-//	_insert(4);
+	_insert(4);
 }

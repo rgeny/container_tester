@@ -6,33 +6,29 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 12:29:42 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/10 13:55:54 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 17:34:39 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_map.hpp"
+#include "test_set.hpp"
 
 #define SIZE 191
 
-void	print	(NAMESPACE::pair<int, int> const & p)
+void	print	(int const & value)
 {
-	std::cout	<< "("
-				<< p.first
-				<< ":"
-				<< p.second
-				<< ")"
+	std::cout	<< value
 				<< std::endl;
 }
 
 int	main	(void)
 {
-	NAMESPACE::map<int, int>	m;
+	NAMESPACE::set<int>	m;
 
 	for (int i = 0; i < SIZE; ++i)
-		m[-i] = i * i;
+		m.insert(i * i);
 	
-	NAMESPACE::map<int, int>	m_cpy1;
-	NAMESPACE::map<int, int> &	m_cpy2 = m_cpy1 = m;
+	NAMESPACE::set<int>	m_cpy1;
+	NAMESPACE::set<int> &	m_cpy2 = m_cpy1 = m;
 
 	std::for_each(m.begin(), m.end(), print);
 	_print_nl();

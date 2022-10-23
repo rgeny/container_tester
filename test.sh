@@ -11,7 +11,7 @@ declare -a set=(
 	"constructor constructor.cpp srcs/set/"
 	"crash_cpy_constructor cpy_constructor_other_compare_function.cpp srcs/set/crash_test/"
 	"crash_range_constructor range_constructor_other_compare_function.cpp srcs/set/crash_test/"
-#	"operator= operator=.cpp srcs/set/modifiers/"
+	"operator= operator=.cpp srcs/set/modifiers/"
 #	"get_allocator get_allocator.cpp srcs/set/access/"
 #	"crash_at_const at_const.cpp srcs/set/crash_test/"
 #	"capacity capacity.cpp srcs/set/"

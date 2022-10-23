@@ -6,17 +6,17 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 15:10:54 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/03 15:14:11 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 17:37:36 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_map.hpp"
+#include "test_set.hpp"
 
 #define SIZE 98
 
 int	main	(void)
 {
-	NAMESPACE::map<int, int>	m;
+	NAMESPACE::set<int>	m;
 
 	PRINT_EXECUTE(m.size());
 	PRINT_EXECUTE(m.empty());
@@ -28,7 +28,7 @@ int	main	(void)
 	PRINT_AND_EXECUTE
 	(
 		for (int i = 0; i < SIZE; ++i)
-			m[i] = -i;
+			m.insert(-i);
 	)
 
 	PRINT_EXECUTE(m.size());

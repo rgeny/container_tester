@@ -14,7 +14,7 @@ declare -a set=(
 	"operator= operator=.cpp srcs/set/modifiers/"
 	"get_allocator get_allocator.cpp srcs/set/access/"
 	"capacity capacity.cpp srcs/set/"
-#	"clear clear.cpp srcs/set/modifiers/"
+	"clear clear.cpp srcs/set/modifiers/"
 #	"insert insert.cpp srcs/set/modifiers/"
 #	"erase erase.cpp srcs/set/modifiers/"
 #	"crash_erase erase.cpp srcs/set/crash_test/"

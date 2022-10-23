@@ -6,21 +6,21 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:46:57 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/18 18:21:24 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 18:28:24 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_map.hpp"
+#include "test_set.hpp"
 
-typedef NAMESPACE::map<int, int>	MAP;
-typedef MAP::iterator				ITERATOR;
-typedef MAP::const_iterator			CONST_ITERATOR;
+typedef NAMESPACE::set<int>		SET;
+typedef SET::iterator			ITERATOR;
+typedef SET::const_iterator		CONST_ITERATOR;
 
 int	main	(void)
 {
-	MAP				m;
+	SET				m;
 
-	m[31] = 7;
+	m.insert(7);
 
 	ITERATOR		it_empty,
 					it = m.begin();

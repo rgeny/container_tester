@@ -4,6 +4,30 @@
 #################### TESTS ####################
 ###############################################
 
+declare -a set_iterator=(
+	"typedef typedef.cpp srcs/map_iterator/"
+#	"constructor constructor.cpp srcs/map_iterator/"
+#	"crash_construct_it_with_cit constructor_iterator_with_const.cpp srcs/map_iterator/crash_test/"
+#	"operator= operator=.cpp srcs/map_iterator/"
+#	"crash_operator= operator=.cpp srcs/map_iterator/crash_test/"
+#	"in-de-crement_operator in.de.crement_operator.cpp srcs/map_iterator/"
+#	"crash_sentinel_value sentinel_value.cpp srcs/map_iterator/crash_test/"
+#	"compare_operator compare_operator.cpp srcs/map_iterator/"
+#	"access_operator access_operator.cpp srcs/map_iterator/"
+#	"crash_access_operator access_operator.cpp srcs/map_iterator/crash_test/"
+#	"crash_operator+val operator_it+val.cpp srcs/map_iterator/crash_test/"
+#	"crash_operator+it operator_val+it.cpp srcs/map_iterator/crash_test/"
+#	"crash_operator-val operator_it-val.cpp srcs/map_iterator/crash_test/"
+#	"crash_operator-it operator_it-it.cpp srcs/map_iterator/crash_test/"
+#	"crash_operator< operator_inf.cpp srcs/map_iterator/crash_test/"
+#	"crash_operator> operator_sup.cpp srcs/map_iterator/crash_test/"
+#	"crash_operator<= operator_infeq.cpp srcs/map_iterator/crash_test/"
+#	"crash_operator>= operator_supeq.cpp srcs/map_iterator/crash_test/"
+#	"crash_operator+= operator_it+=val.cpp srcs/map_iterator/crash_test/"
+#	"crash_operator-= operator_it-=val.cpp srcs/map_iterator/crash_test/"
+#	"crash_operator[] operator[].cpp srcs/map_iterator/crash_test/"
+	)
+
 declare -a set=(
 	"typedef typedef.cpp srcs/set/"
 	"crash_const_ref const_ref.cpp srcs/set/crash_test/"
@@ -31,7 +55,6 @@ declare -a set=(
 	"compare_operator operator.cpp srcs/set/compare/"
 	"begin_end begin_end.cpp srcs/set/access/"
 	)
-
 
 declare -a map_iterator=(
 	"typedef typedef.cpp srcs/map_iterator/"
@@ -194,6 +217,7 @@ declare -A lib_test=(
 	['map']="${map[@]}"
 	['map_iterator']="${map_iterator[@]}"
 	['set']="${set[@]}"
+	['set_iterator']="${set_iterator[@]}"
 	['other']="${other_test[@]}"
 	)
 
@@ -205,6 +229,7 @@ declare -a test_name=(
 	"map"
 	"map_iterator"
 	"set"
+	"set_iterator"
 	"other"
 	)
 

@@ -6,27 +6,26 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 13:39:26 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/18 18:12:24 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 18:39:14 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_map.hpp"
+#include "test_set.hpp"
 
-#define SIZE 14
+#define SIZE 'z'
 
-typedef NAMESPACE::map<int, int>	MAP;
+typedef NAMESPACE::set<std::string>	SET;
 
 template < typename Container >
 void	Test<Container>::const_test	(void) const
 {
-	MAP::const_iterator	it = this->begin(),
+	SET::const_iterator	it = this->begin(),
 						ite = this->end();
 
 	while (it != ite)
 	{
 		PRINT_EXECUTE(*it);
-		PRINT_EXECUTE(it->first);
-		PRINT_EXECUTE(it->second);
+		PRINT_EXECUTE(it->size());
 		PRINT_AND_EXECUTE(++it);
 		_print_nl();
 	}
@@ -34,22 +33,13 @@ void	Test<Container>::const_test	(void) const
 template < typename Container >
 void	Test<Container>::test	(void)
 {
-	MAP::iterator	it = this->begin(),
+	SET::iterator	it = this->begin(),
 					ite = this->end();
 
 	while (it != ite)
 	{
 		PRINT_EXECUTE(*it);
-		PRINT_EXECUTE(it->first);
-		PRINT_EXECUTE(it->second);
-		PRINT_AND_EXECUTE((*it).second -= 1);
-		PRINT_EXECUTE(*it);
-		PRINT_EXECUTE(it->first);
-		PRINT_EXECUTE(it->second);
-		PRINT_AND_EXECUTE(it->second -= 1);
-		PRINT_EXECUTE(*it);
-		PRINT_EXECUTE(it->first);
-		PRINT_EXECUTE(it->second);
+		PRINT_EXECUTE(it->size());
 		PRINT_AND_EXECUTE(++it);
 		_print_nl();
 	}
@@ -57,10 +47,14 @@ void	Test<Container>::test	(void)
 
 int	main	(void)
 {
-	Test<MAP>		m;
+	Test<SET>		m;
+	std::string	str;
 
-	for (int i = 0; i < SIZE; ++i)
-		m[i] = i * i;
+	for (char c = 'a'; c <= SIZE; ++c)
+	{
+		str += c;
+		m.insert(str);
+	}
 
 	m.test();
 	m.const_test();

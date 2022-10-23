@@ -8,7 +8,7 @@ declare -a set_iterator=(
 	"typedef typedef.cpp srcs/set_iterator/"
 	"constructor constructor.cpp srcs/set_iterator/"
 	"operator= operator=.cpp srcs/set_iterator/"
-#	"in-de-crement_operator in.de.crement_operator.cpp srcs/set_iterator/"
+	"in-de-crement_operator in.de.crement_operator.cpp srcs/set_iterator/"
 #	"crash_sentinel_value sentinel_value.cpp srcs/set_iterator/crash_test/"
 #	"compare_operator compare_operator.cpp srcs/set_iterator/"
 #	"access_operator access_operator.cpp srcs/set_iterator/"

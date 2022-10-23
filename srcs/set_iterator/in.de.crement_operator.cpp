@@ -6,11 +6,11 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:01:22 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/18 18:20:37 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 18:30:23 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_map.hpp"
+#include "test_set.hpp"
 
 #define SIZE 41
 
@@ -48,18 +48,18 @@ std::ostream &	operator<<	(std::ostream & os,
 	return (os);
 }
 
-typedef NAMESPACE::map<String, int>	MAP;
+typedef NAMESPACE::set<String>	SET;
 
 int	main	(void)
 {
-	MAP					m;
-	MAP::iterator		it;
-	MAP::const_iterator	cit;
+	SET					m;
+	SET::iterator		it;
+	SET::const_iterator	cit;
 	std::string		str = "A";
 
 	for (int i = 0; i < SIZE; ++i)
 	{
-		m[str] = i;
+		m.insert(str);
 		if (str[0] == 'Z')
 			str[0] = 'a';
 		else

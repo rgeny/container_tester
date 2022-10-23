@@ -6,15 +6,15 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:05:42 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/08 12:07:22 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 18:31:45 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_map.hpp"
+#include "test_set.hpp"
 
 int	main	(void)
 {
-	NAMESPACE::map<std::string, int>	m;
+	NAMESPACE::set<std::string>		m;
 
 	PRINT_EXECUTE(*m.begin());
 }

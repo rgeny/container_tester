@@ -28,7 +28,7 @@ declare -a set=(
 	"upper_bound upper_bound.cpp srcs/set/access/"
 	"key_comp key_comp.cpp srcs/set/compare/"
 	"value_comp value_comp.cpp srcs/set/compare/"
-#	"compare_operator operator.cpp srcs/set/compare/"
+	"compare_operator operator.cpp srcs/set/compare/"
 #	"begin_end begin_end.cpp srcs/set/access/"
 #	"crash_begin begin.cpp srcs/set/crash_test/"
 #	"crash_end end.cpp srcs/set/crash_test/"

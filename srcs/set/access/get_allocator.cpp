@@ -6,15 +6,15 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 12:51:00 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/18 16:14:14 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 17:35:34 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_map.hpp"
+#include "test_set.hpp"
 
 #define SIZE 27
 
-typedef NAMESPACE::map<int, int, std::less<int>, std::allocator<long> >	MAP;
+typedef NAMESPACE::set<int, std::less<int>, std::allocator<long> >	SET;
 
 template < typename Container >
 void	Test<Container>::const_test	(void) const
@@ -27,10 +27,10 @@ void	Test<Container>::const_test	(void) const
 
 int	main	(void)
 {
-	Test<MAP>	m;
+	Test<SET>	m;
 
 	for (int i = 0; i < SIZE; ++i)
-		m[i * SIZE] = -i * i;
+		m.insert(-i * i);
 
 	m.const_test();
 }

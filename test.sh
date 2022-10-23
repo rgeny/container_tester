@@ -4,6 +4,42 @@
 #################### TESTS ####################
 ###############################################
 
+declare -a set=(
+	"typedef typedef.cpp srcs/set/"
+	"crash_const_ref const_ref.cpp srcs/set/crash_test/"
+	"crash_const_pt const_pt.cpp srcs/set/crash_test/"
+	"constructor constructor.cpp srcs/set/"
+	"crash_cpy_constructor cpy_constructor_other_compare_function.cpp srcs/set/crash_test/"
+	"crash_range_constructor range_constructor_other_compare_function.cpp srcs/set/crash_test/"
+#	"operator= operator=.cpp srcs/set/modifiers/"
+#	"get_allocator get_allocator.cpp srcs/set/access/"
+#	"crash_at_const at_const.cpp srcs/set/crash_test/"
+#	"capacity capacity.cpp srcs/set/"
+#	"clear clear.cpp srcs/set/modifiers/"
+#	"insert insert.cpp srcs/set/modifiers/"
+#	"erase erase.cpp srcs/set/modifiers/"
+#	"crash_erase erase.cpp srcs/set/crash_test/"
+#	"crash_erase_return erase_return_value.cpp srcs/set/crash_test/"
+#	"value_compare value_compare.cpp srcs/set/compare/"
+#	"crash_value_compare_constructor value_compare_constructor.cpp srcs/set/crash_test/"
+#	"crash_value_compare_member value_compare_member.cpp srcs/set/crash_test/"
+#	"swap swap.cpp srcs/set/modifiers/"
+#	"count count.cpp srcs/set/access/"
+#	"find find.cpp srcs/set/access/"
+#	"crash_find find.cpp srcs/set/crash_test/"
+#	"equal_range equal_range.cpp srcs/set/access/"
+#	"lower_bound lower_bound.cpp srcs/set/access/"
+#	"upper_bound upper_bound.cpp srcs/set/access/"
+#	"key_comp key_comp.cpp srcs/set/compare/"
+#	"value_comp value_comp.cpp srcs/set/compare/"
+#	"compare_operator operator.cpp srcs/set/compare/"
+#	"crash_erase_null_iterator erase_null_iterator.cpp srcs/set/crash_test/"
+#	"begin_end begin_end.cpp srcs/set/access/"
+#	"crash_begin begin.cpp srcs/set/crash_test/"
+#	"crash_end end.cpp srcs/set/crash_test/"
+	)
+
+
 declare -a map_iterator=(
 	"typedef typedef.cpp srcs/map_iterator/"
 	"constructor constructor.cpp srcs/map_iterator/"
@@ -164,6 +200,7 @@ declare -A lib_test=(
 	['reverse_iterator']="${reverse_iterator[@]}"
 	['map']="${map[@]}"
 	['map_iterator']="${map_iterator[@]}"
+	['set']="${set[@]}"
 	['other']="${other_test[@]}"
 	)
 
@@ -174,6 +211,7 @@ declare -a test_name=(
 	"reverse_iterator"
 	"map"
 	"map_iterator"
+	"set"
 	"other"
 	)
 

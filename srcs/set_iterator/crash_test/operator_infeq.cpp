@@ -6,20 +6,20 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 13:53:55 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/08 13:56:30 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 18:45:04 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_map.hpp"
+#include "test_set.hpp"
 
 #define	SIZE 3
 
-typedef NAMESPACE::map<int, int>	MAP;
+typedef NAMESPACE::set<int>	SET;
 
 int	main	(void)
 {
-	MAP				m;
+	SET				m;
 
-	m[4] = 2;
+	m.insert(2);
 	PRINT_EXECUTE(m.begin() <= m.end());
 }

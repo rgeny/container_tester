@@ -6,20 +6,20 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:15:15 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/18 17:00:32 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 18:01:09 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_map.hpp"
+#include "test_set.hpp"
 
 #define SIZE 9
 
-typedef NAMESPACE::map<int, int>	MAP;
+typedef NAMESPACE::set<int>	SET;
 
 template < typename Container >
 void	Test<Container>::test	(void)
 {
-	MAP::iterator			it;
+	SET::iterator			it;
 
 	for (int i = -2; i < SIZE + 2; ++i)
 	{
@@ -27,15 +27,14 @@ void	Test<Container>::test	(void)
 
 		it = this->lower_bound(val);
 
-		PRINT_EXECUTE(it->first);
-		PRINT_EXECUTE(it->second);
+		PRINT_EXECUTE(*it);
 		_print_nl();
 	}
 }
 template < typename Container >
 void	Test<Container>::const_test	(void) const
 {
-	MAP::const_iterator		it;
+	SET::const_iterator		it;
 
 	for (int i = -2; i < SIZE + 2; ++i)
 	{
@@ -43,18 +42,17 @@ void	Test<Container>::const_test	(void) const
 
 		it = this->lower_bound(val);
 
-		PRINT_EXECUTE(it->first);
-		PRINT_EXECUTE(it->second);
+		PRINT_EXECUTE(*it);
 		_print_nl();
 	}
 }
 
 int	main	(void)
 {
-	Test<MAP>	m;
+	Test<SET>	m;
 
 	for (int i = 0; i < SIZE; ++i)
-		m[i] = i;
+		m.insert(i);
 
 	m.test();
 	m.const_test();

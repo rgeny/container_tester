@@ -6,26 +6,26 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:22:18 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/18 17:06:58 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 18:07:42 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_map.hpp"
+#include "test_set.hpp"
 
 #define SIZE 4
 
-typedef NAMESPACE::map<int, std::string>	MAP;
+typedef NAMESPACE::set<int>	SET;
 
 template < typename Container >
 void	Test<Container>::const_test	(void) const
 {
-	MAP::value_compare	value_comp = this->value_comp();
+	SET::value_compare	value_comp = this->value_comp();
 
-	for (MAP::const_iterator it = this->begin(), ite = this->end();
+	for (SET::const_iterator it = this->begin(), ite = this->end();
 		 it != ite;
 		 ++it)
 	{
-		for (MAP::const_iterator it2 = this->begin(), ite2 = this->end();
+		for (SET::const_iterator it2 = this->begin(), ite2 = this->end();
 			 it2 != ite2;
 			 ++it2)
 		{
@@ -36,10 +36,10 @@ void	Test<Container>::const_test	(void) const
 
 int	main	(void)
 {
-	Test<MAP>		m;
+	Test<SET>		m;
 
 	for (int i = 0; i < SIZE; ++i)
-		m[i] = 'a' + i;
+		m.insert(i);
 
 	m.const_test();
 }

@@ -6,18 +6,18 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 12:57:09 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/05 13:08:07 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 17:47:47 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_map.hpp"
+#include "test_set.hpp"
 
-typedef NAMESPACE::map<int, int>	MAP;
+typedef NAMESPACE::set<int>	SET;
 
 int	main	(void)
 {
-	MAP	m;
+	SET	m;
 
-	m[1] = 1;
-	MAP::iterator	it = m.erase(m.begin());
+	m.insert(1);
+	SET::iterator	it = m.erase(m.begin());
 }

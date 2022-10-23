@@ -10,7 +10,7 @@ declare -a set_iterator=(
 	"operator= operator=.cpp srcs/set_iterator/"
 	"in-de-crement_operator in.de.crement_operator.cpp srcs/set_iterator/"
 	"crash_sentinel_value sentinel_value.cpp srcs/set_iterator/crash_test/"
-#	"compare_operator compare_operator.cpp srcs/set_iterator/"
+	"compare_operator compare_operator.cpp srcs/set_iterator/"
 #	"access_operator access_operator.cpp srcs/set_iterator/"
 #	"crash_access_operator access_operator.cpp srcs/set_iterator/crash_test/"
 #	"crash_operator+val operator_it+val.cpp srcs/set_iterator/crash_test/"

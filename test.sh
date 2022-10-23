@@ -21,7 +21,7 @@ declare -a set=(
 	"crash_erase_return erase_return_value.cpp srcs/set/crash_test/"
 	"crash_erase_null_iterator erase_null_iterator.cpp srcs/set/crash_test/"
 	"swap swap.cpp srcs/set/modifiers/"
-#	"count count.cpp srcs/set/access/"
+	"count count.cpp srcs/set/access/"
 #	"find find.cpp srcs/set/access/"
 #	"crash_find find.cpp srcs/set/crash_test/"
 #	"equal_range equal_range.cpp srcs/set/access/"

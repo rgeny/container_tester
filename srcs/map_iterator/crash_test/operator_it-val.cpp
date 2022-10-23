@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 13:51:23 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/08 13:52:53 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 18:49:29 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ typedef NAMESPACE::map<int, int>	MAP;
 int	main	(void)
 {
 	MAP				m;
-	MAP::iterator	it = m.begin() - 3;
+	__attribute__((unused)) MAP::iterator	it = m.begin() - 3;
 }

@@ -6,39 +6,39 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:22:18 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/18 17:05:23 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 18:07:00 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_map.hpp"
+#include "test_set.hpp"
 
-#define SIZE 4
+#define SIZE 'f'
 
-typedef NAMESPACE::map<int, std::string>	MAP;
+typedef NAMESPACE::set<char>	SET;
 
 template < typename Container >
 void	Test<Container>::const_test	(void) const
 {
-	MAP::key_compare	key_comp = this->key_comp();
+	SET::key_compare	key_comp = this->key_comp();
 
-	for (MAP::const_iterator it = this->begin(), ite = this->end();
+	for (SET::const_iterator it = this->begin(), ite = this->end();
 		 it != ite;
 		 ++it)
 	{
-		for (MAP::const_iterator it2 = this->begin(), ite2 = this->end();
+		for (SET::const_iterator it2 = this->begin(), ite2 = this->end();
 			 it2 != ite2;
 			 ++it2)
 		{
-			PRINT_EXECUTE(key_comp(it->first, it2->first));
+			PRINT_EXECUTE(key_comp(*it, *it2));
 		}
 	}
 }
 
 int	main	(void)
 {
-	Test<MAP>		m;
-	for (int i = 0; i < SIZE; ++i)
-		m[i] = 'a' + i;
+	Test<SET>		m;
+	for (char c = 'a'; c < SIZE; ++c)
+		m.insert(c);
 
 	m.const_test();
 }

@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 15:56:12 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/08 15:57:23 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 17:29:56 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,8 +117,7 @@ template
 	typename CRIterator
 >
 static void	_test_map	(RIterator rit,
-						 CRIterator crit,
-						 size_t n)
+						 CRIterator crit)
 {
 	TRY_CATCH
 	(
@@ -185,7 +184,7 @@ int	main	(void)
 		crit = m.rbegin();
 		for (size_t i = 0; i < SIZE / 2; i++)
 		{
-			_test_map(rit, crit, i);
+			_test_map(rit, crit);
 			rit++;
 			crit++;
 		}

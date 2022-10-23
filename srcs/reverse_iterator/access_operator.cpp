@@ -6,7 +6,7 @@
 /*   By: rgeny <rgeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 14:34:31 by rgeny             #+#    #+#             */
-/*   Updated: 2022/10/18 18:22:46 by rgeny            ###   ########.fr       */
+/*   Updated: 2022/10/23 17:29:46 by rgeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ void	_test_vector	(RIterator rit,
 }
 
 template < typename RIterator >
-void	_test_map	(RIterator rit,
-						 size_t n)
+void	_test_map	(RIterator rit)
 {
 	TRY_CATCH
 	(
@@ -88,8 +87,8 @@ int	main	(void)
 				++rit;
 				++crit;
 			}
-			_test_map(rit, i);
-			_test_map(crit, i);
+			_test_map(rit);
+			_test_map(crit);
 		}
 	}
 }

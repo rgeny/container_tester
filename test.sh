@@ -6,7 +6,7 @@
 
 declare -a set_iterator=(
 	"typedef typedef.cpp srcs/map_iterator/"
-#	"constructor constructor.cpp srcs/map_iterator/"
+	"constructor constructor.cpp srcs/map_iterator/"
 #	"crash_construct_it_with_cit constructor_iterator_with_const.cpp srcs/map_iterator/crash_test/"
 #	"operator= operator=.cpp srcs/map_iterator/"
 #	"crash_operator= operator=.cpp srcs/map_iterator/crash_test/"
